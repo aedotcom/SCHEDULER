@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Kornic Library">
+      <UniqueIdentifier>{700d074a-99d4-49d2-98c7-614ae253ab28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{dd3302f1-9120-4d01-8e40-94c3d0c91543}</UniqueIdentifier>
+      <Extensions>*.h</Extensions>
+    </Filter>
+    <Filter Include="Header Files\FA %28H%29">
+      <UniqueIdentifier>{81f7fcb2-eee8-44b0-ad0a-cf8dac4ed97b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI %28H%29">
+      <UniqueIdentifier>{eebf4b09-4995-47bc-be0f-f54705041b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DLL %28H%29">
+      <UniqueIdentifier>{0d5c480f-bcde-44a4-ab10-58be1bed2898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EQUIP_IO %28H%29">
+      <UniqueIdentifier>{26f1884f-966d-43ec-a6a5-72712664e5e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RECIPE %28H%29">
+      <UniqueIdentifier>{ec679e5f-7111-4c01-b700-907de353f6eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ETC %28H%29">
+      <UniqueIdentifier>{5c5170ab-e284-4058-ad09-7e7b0953c425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ROBOT %28H%29">
+      <UniqueIdentifier>{eea04242-ae0b-4a8f-974d-ed8f934541d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SCHEDULING %28H%29">
+      <UniqueIdentifier>{823fc979-2296-4f3d-bd51-873c17a443b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MAIN%28H%29">
+      <UniqueIdentifier>{a1f4d35a-7651-4f13-8612-a88767f75e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ENGINE%28H%29">
+      <UniqueIdentifier>{a24f21cd-29a7-4546-8e86-fa645092e1fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bfa9fe5f-1e01-461f-bd6a-afe89832fdc2}</UniqueIdentifier>
+      <Extensions>*.c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\FA">
+      <UniqueIdentifier>{39a59e98-39e1-434f-a331-0d34f1205f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{636d5dbf-2db8-4a5d-92b6-0e110d61f076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DLL">
+      <UniqueIdentifier>{2e3396aa-422d-4fc7-bcc9-708bd9720e2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EQUIP_IO">
+      <UniqueIdentifier>{204290e8-4d07-4162-af3b-c49c82e342d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ROBOT">
+      <UniqueIdentifier>{665c2f71-c73d-483a-907d-54e483d51c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ETC">
+      <UniqueIdentifier>{3effdbac-d946-41be-8d57-868044edd956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SCHEDULING">
+      <UniqueIdentifier>{9238851f-a828-45ed-955b-279022ed90c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SCHEDULING\COMMON">
+      <UniqueIdentifier>{e8428300-401b-4856-b640-00ff5cf5015f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SCHEDULING\Main-Common">
+      <UniqueIdentifier>{a9f57085-3995-4c0f-90f7-24dc7dafb09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SCHEDULING\TRANSFER">
+      <UniqueIdentifier>{012683fe-6250-4e21-aaf5-091f4c7b6d3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SCHEDULING\COMMON-USER%28INF%29">
+      <UniqueIdentifier>{1fc60d5e-6ebd-49de-a77d-4eff8ed83e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\INTERFACE">
+      <UniqueIdentifier>{85144ce6-5fa8-4892-be94-17bf2b8658fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RECIPE">
+      <UniqueIdentifier>{5f64c3fc-7e42-478d-adab-b2be7048faa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION">
+      <UniqueIdentifier>{f8f44746-b5e1-4520-9ef2-dee18ebe5254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\INFORMATION">
+      <UniqueIdentifier>{9ba8d085-dab6-4ac7-aa18-3a0949976c28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\SOURCE">
+      <UniqueIdentifier>{1eb3bd48-a5eb-4aaa-85fe-cd90dd456155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\SOURCE\ALG-0">
+      <UniqueIdentifier>{9d18ac36-eb19-40ba-bc48-f81b0975cce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\SOURCE\ALG-4">
+      <UniqueIdentifier>{8a4fdfc3-907c-4b78-960c-07ea9dc83f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\SOURCE\ALG-6">
+      <UniqueIdentifier>{69434030-0ac3-45b4-b39a-f41151c70a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\HEADER">
+      <UniqueIdentifier>{490b8c92-67bb-499f-a0c6-12dfe4925e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\HEADER\ALG-0%28H%29">
+      <UniqueIdentifier>{a06cbe75-bd9f-4742-adf8-e3a14beaec78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\HEADER\ALG-4%28H%29">
+      <UniqueIdentifier>{3a27d596-8604-49d6-b468-bb11ff91b4d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\HEADER\ALG-6%28H%29">
+      <UniqueIdentifier>{4af6e1d2-ece6-452e-8385-22a26a0e5e7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APPLICATION\HEADER\INF%28DEFAULT%29">
+      <UniqueIdentifier>{89aaa26f-dc99-4f99-8dfa-34f0fb656430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INF%28USER%29">
+      <UniqueIdentifier>{c320b63e-cce4-4e87-90a2-450d146fd6b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="K:\lib\FILEtoSMIntf.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlAnal.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlEtc.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlfile2.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlgui.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlgui2P2.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlStr.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\kutlTime.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+    <Library Include="K:\lib\SchCfgIntf.lib">
+      <Filter>Kornic Library</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H\FA_Handling.h">
+      <Filter>Header Files\FA %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Gui_Handling.h">
+      <Filter>Header Files\GUI %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\DLL_Interface.h">
+      <Filter>Header Files\DLL %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Equip_Handling.h">
+      <Filter>Header Files\EQUIP_IO %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\IO_Address.h">
+      <Filter>Header Files\EQUIP_IO %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\IO_Part_data.h">
+      <Filter>Header Files\EQUIP_IO %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\IO_Part_Log.h">
+      <Filter>Header Files\EQUIP_IO %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\iolog.h">
+      <Filter>Header Files\EQUIP_IO %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\RcpFile_Handling.h">
+      <Filter>Header Files\RECIPE %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Alarm_Analysis.h">
+      <Filter>Header Files\ETC %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\File_ReadInit.h">
+      <Filter>Header Files\ETC %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\System_Tag.h">
+      <Filter>Header Files\ETC %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Timer_Handling.h">
+      <Filter>Header Files\ETC %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\User_Parameter.h">
+      <Filter>Header Files\ETC %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Utility.h">
+      <Filter>Header Files\ETC %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Robot_Animation.h">
+      <Filter>Header Files\ROBOT %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Robot_Handling.h">
+      <Filter>Header Files\ROBOT %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\LotType.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\MR_Data.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\MultiJob.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\MultiReg.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_CassetteResult.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_CassetteSupply.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_cassmap.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_CommonUser.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_EIL.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_estimate.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_FMArm_Multi.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_HandOff.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_Interlock.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_main.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Sch_Multi_ALIC.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_OneSelect.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_prepost.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_PrePrcs.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_prm.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_prm_Cluster.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_prm_FBTPM.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_prm_Log.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_ProcessMonitor.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_ReStart.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_sdm.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_sub.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_Transfer.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_TransferMaintInf.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_TransferUser.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\sch_Util.h">
+      <Filter>Header Files\SCHEDULING %28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\default.h">
+      <Filter>Header Files\MAIN%28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\EQ_Enum.h">
+      <Filter>Header Files\MAIN%28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Errorcode.h">
+      <Filter>Header Files\MAIN%28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="H\Version.h">
+      <Filter>Header Files\MAIN%28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="K:\h\kutlStr.h">
+      <Filter>Header Files\ENGINE%28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="K:\h\SchJobIntf.h">
+      <Filter>Header Files\ENGINE%28H%29</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\FA_Hand_Load.c">
+      <Filter>Source Files\FA</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FA_Hand_PrePost.c">
+      <Filter>Source Files\FA</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FA_Hand_Unload(M).c">
+      <Filter>Source Files\FA</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FA_Hand_Unload.c">
+      <Filter>Source Files\FA</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FA_Handling.c">
+      <Filter>Source Files\FA</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_FA.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_Fail.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_FixCluster.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_Interlock.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_Module.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_PrePost.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_RbAnim.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_RbCal.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_Recipe.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_Status.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_SwitchSide.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_System.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Hand_TrClear.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Gui_Handling.c">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DLL_Interface.c">
+      <Filter>Source Files\DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DLL_InterfaceSCH.c">
+      <Filter>Source Files\DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_ALIC.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_BEGINEND.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_BMSIDE.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_CARR.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_ETC.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_FM.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_PROCESS.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Equip_Handling_TM.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IO_Part_data.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IO_Part_Log.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\iolog.c">
+      <Filter>Source Files\EQUIP_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Robot_Animation.c">
+      <Filter>Source Files\ROBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Robot_Animation_ETC.c">
+      <Filter>Source Files\ROBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Robot_Animation_FM.c">
+      <Filter>Source Files\ROBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Robot_Animation_TM.c">
+      <Filter>Source Files\ROBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Robot_Handling.c">
+      <Filter>Source Files\ROBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Alarm_Analysis.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\comm_check.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\event_Handling.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\File_ReadInit.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\prg_code.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\system_Tag.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer_Handling.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\User_Parameter.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility.c">
+      <Filter>Source Files\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MR_Data.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MultiJob.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Multireg.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_CassetteResult.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_CassetteSupply.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_cassmap.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Common.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_EIL.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Estimate.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_FMARM_Multi.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_HandOff.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Interlock.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro_ALIC.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro_BM.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro_Flow.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro_FM.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro_Process.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Macro_TM.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Main.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sch_Multi_ALIC.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_OneSelect.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_PrepPost.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_PrePrcs.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_prm.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_prm_Cluster.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_prm_ClusterI.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_prm_FBTPM.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_prm_Log.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_ProcessMonitor.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_RecipeHandling.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_ReStart.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Run.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_sdm.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_sub.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_subi.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Util.c">
+      <Filter>Source Files\SCHEDULING\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Run_Common.c">
+      <Filter>Source Files\SCHEDULING\Main-Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_Transfer.c">
+      <Filter>Source Files\SCHEDULING\TRANSFER</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_TransferMaintInf.c">
+      <Filter>Source Files\SCHEDULING\TRANSFER</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_TransferUser.c">
+      <Filter>Source Files\SCHEDULING\TRANSFER</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sch_CommonUser.c">
+      <Filter>Source Files\SCHEDULING\COMMON-USER%28INF%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\INF_Extern.c">
+      <Filter>Source Files\INTERFACE</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RcpFile_Handling.c">
+      <Filter>Source Files\RECIPE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_CommonUser.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Dll.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Equip.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Event.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Init.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_log.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Param.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Run.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Run_F.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Run_F_DBL1.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Run_F_Def.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_Run_F_SW.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_sub.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_sub_F_sw.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_sub_Sp2.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_sub_Sp3.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_sub_Sp4.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_0\Source\sch_A0_subBM.c">
+      <Filter>APPLICATION\SOURCE\ALG-0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_CommonUser.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Dll.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Equip.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Event.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Init.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_log.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Param.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Run.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_Run_F.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_sdm.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_sub.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_4\Source\sch_A4_subBM.c">
+      <Filter>APPLICATION\SOURCE\ALG-4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_CommonUser.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Dll.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Equip.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Event.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Init.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_log.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Param.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Run.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Run_Cyclon.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_Run_F.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_sub.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\APP_ALG_6\Source\sch_A6_subBM.c">
+      <Filter>APPLICATION\SOURCE\ALG-6</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Image\background.bmp" />
+    <Image Include="Image\main.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Info\SchedulerUpdate.txt">
+      <Filter>APPLICATION\INFORMATION</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Info\A0-S0-FMDbl.JPG">
+      <Filter>APPLICATION\INFORMATION</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Info\A6-S0-DoubleTM.JPG">
+      <Filter>APPLICATION\INFORMATION</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Info\SchedulerItem.txt">
+      <Filter>APPLICATION\INFORMATION</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_CommonUser.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Default.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Dll.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Equip.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Event.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_F.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Init.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_log.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Main.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_Param.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_sub.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_sub_F_dbl1.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_sub_F_sw.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_sub_sp2.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_sub_sp3.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_sub_sp4.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_0\H\sch_A0_subBM.h">
+      <Filter>APPLICATION\HEADER\ALG-0%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_CommonUser.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Default.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Dll.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Equip.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Event.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Init.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_log.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Main.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_Param.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_sdm.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_sub.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_4\H\sch_A4_subBM.h">
+      <Filter>APPLICATION\HEADER\ALG-4%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_CommonUser.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Default.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Dll.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Equip.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Event.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Init.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_log.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Main.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_Param.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_sub.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\APP_ALG_6\H\sch_A6_subBM.h">
+      <Filter>APPLICATION\HEADER\ALG-6%28H%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_CimSeqnc.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_default.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_EQ_Enum.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_Equip_Handling.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_Errorcode.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_IO_Part_data.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_IO_Part_Log.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_iolog.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_LotType.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_MultiJob.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_MultiReg.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_Robot_Handling.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_CassetteResult.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_CassetteSupply.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_CommonUser.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_FMArm_Multi.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_Macro.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_Sch_Multi_ALIC.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_OneSelect.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_prepost.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_PrePrcs.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_prm.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_prm_Cluster.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_prm_FBTPM.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_sdm.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_sub.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_sch_UserFlow.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_Scheduler.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_System_Tag.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_Timer_Handling.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="K:\h\SchInf\INF_User_Parameter.h">
+      <Filter>APPLICATION\HEADER\INF%28DEFAULT%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="H_User\INF_User_System.h">
+      <Filter>INF%28USER%29</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

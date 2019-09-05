@@ -1,0 +1,421 @@
+//====================================================================================================================================================================================================================================
+// Main System part
+//====================================================================================================================================================================================================================================
+// Date		File				Group			Info
+//====================================================================================================================================================================================================================================
+2009.04.02	DLL_Interface.c			DLL		1012	USER_RECIPE_INFO_VERIFICATION_EX4( int REGID , int side , int pos , int loopcount , int orderindex , int id , Scheduling_Path *CLUSTER_DATA ); interface 추가
+
+2009.04.02	sch_Run.c			DLL		1012	USER_RECIPE_INFO_VERIFICATION_EX4( int REGID , int side , int pos , int loopcount , int orderindex , int id , Scheduling_Path *CLUSTER_DATA ); interface 추가
+
+2009.04.02	sch_PrepPost.c			SUPPLY		1038	Balance시 Cluster Count 잘못 계산되는 문제 수정
+
+2009.04.02	sch_sub.c			SUPPLY		1038	Balance시 Cluster Count 잘못 계산되는 문제 수정
+
+2009.04.03	MultiJob.h			MULTIJOB	1012	MultiJob 관련 OutCassette Interface 추가
+
+2009.04.04	MultiJob.c			MULTIJOB	1012	MultiJob 관련 OutCassette Interface 추가
+
+2009.04.07	MultiJob.c			MULTIJOB	1012	MultiJob 관련 OutCassette Interface 추가
+
+2009.04.07	sch_Run.c			MULTIJOB	1012	MultiJob 관련 OutCassette Interface 추가
+
+2009.04.08	FA_Handling.c			MULTIJOB	1012	MultiJob 관련 OutCassette Interface 추가시 Substrate Message Trouble 수정
+
+2009.04.08	sch_PrepPost.c			END		1012	BM End 발생 후 후행 Lot이 연속 진행시 FM_Side나 TM_Side가 발생하지 않는 문제 수정
+
+2009.04.13	sch_PrepPost.c			END		1014	End시 Handoff Out Part Delay시 다른 Port도 Delay되는 문제 수정
+
+2009.04.13	sch_Run.c			END		1014	End시 Handoff Out Part Delay시 다른 Port도 Delay되는 문제 수정
+
+2009.04.23	system_Tag.c			RECIPE		1038	Recipe Reload 기능 추가
+
+2009.04.29	sch_Macro_Flow.c		CASSETTE	1038	Cassette Wafer Disappear 기능 보완
+
+2009.04.30	sch_Run.c			MULTIARM	1034	FM Multi Arm에서 BM1->BM2로 이동하는 Batch Type시 중간 Slot 사용 안할때 가상 Data Setting시 문제 수정
+
+2009.05.06	sch_RecipeHandling.c		MULTIARM	1034	FM Multi Arm에서 BM1->BM2로 이동하는 Batch Type시 중간 Slot 사용 안할때 가상 Data Setting시 문제 수정
+
+2009.05.06	sch_Run_Common.c		FMTMSIDE	1014	Event로 FM_SIDE,TM_SIDE를 바꿀 수 있는 기능 추가
+
+2009.05.06	system_Tag.c			FMTMSIDE	1014	Event로 FM_SIDE,TM_SIDE를 바꿀 수 있는 기능 추가
+
+2009.05.11	MultiJob.c			MULTIJOB	1038	우선 대기한 Control Job이 선택되어 Start되지 않는 문제 수정
+
+2009.05.11	sch_Run.c			SYSTEM		0	Critical Section 보완
+
+2009.05.14	RcpFile_Handling.c		RECIPE		1012	MAX_CLUSTER_DEPTH가 100개 이상일 때 Cluster Recipe를 읽을 수 있도록 수정
+
+2009.05.20	DLL_Interface.c			DLL		1012	USER_RECIPE_DUMMY_INFO_VERIFICATION( int side , int pointer , int pathin , int slotin , int selpm , int param , char *clusterrecipe , Scheduling_Path *CLUSTER_DATA ); interface 추가
+
+2009.05.20	sch_Macro_Flow.c		DLL		1012	USER_RECIPE_DUMMY_INFO_VERIFICATION( int side , int pointer , int pathin , int slotin , int selpm , int param , char *clusterrecipe , Scheduling_Path *CLUSTER_DATA ); interface 추가
+
+2009.05.21	sch_sub.c			DISAPPEAR	1038	Disappear기능 보완및 Bug 수정
+
+2009.05.28	EQ_Enum.h			MODULE		101	MAX_PM_SLOT_DEPTH을 6에서 26으로 확장
+
+2009.05.28	IO_Part_data.c			MODULE		101	MAX_PM_SLOT_DEPTH을 6에서 26으로 확장
+
+2009.06.02	EQ_Enum.h			MODULE		101	MAX_FINGER_TM을 2에서 4로 확장
+
+2009.06.03	sch_Macro_Flow.c		FLOWCTRL	1012	Lot Post Flow Control Bug Update
+
+2009.06.04	sch_PrepPost.c			END		0	Pre End Call시 Log추가
+
+2009.06.09	MultiJob.c			JOB		1038	SCHMULTI_CONTROLJOB_PARALLEL_SELECT API에서 LeaveCriticalSection을 처리하지 않은 Bug수정
+
+2009.06.15	Gui_Hand_Module.c		MODULE		1012	PICK/PLACE시 OPEN_GATE,CLOSE_GATE의 Parameter를 PREPARE,POST와 똑같은 Format이 되는 Option추가
+
+2009.06.16	RcpFile_Handling.c		RECIPE		1038	Group Name이 없을 시 문제가 되는 Recipe 분석 부분 수정
+
+2009.06.17	sch_RecipeHandling.c		DLL		1012	MFI용 _SCH_COMMON_METHOD_CHECK_SKIP_WHEN_START Interface 추가
+
+2009.06.23	sch_sub.c			MODULE		1026	Enable,Disable,Remove가 동시 호출시 문제 발생에 따른 CriticalSection 적용
+
+2009.06.24	DLL_InterfaceSCH.c		DLL		0	MFI에서 _SCH_INF_DLL_CONTROL_GET_METHOD_ORDER API가 존재하지 않을 때 정상적으로 동작하지 않는 문제 수정
+
+2009.07.09	sch_main.c			WAIT		0	Lot Start를 위한 Wait 상태에서 잘못 CriticalSection의 사용으로 인한 Flow Delay 문제 수정
+
+2009.07.09	sch_main.c			PAUSE		0	Lot Pause인 경우에도 Deadlock.log가 생기는 문제 수정
+
+2009.07.09	sch_prm_FBTPM.c			MODULE		1026	_SCH_MODULE_GET_USE_ENABLE가 동시 호출시 문제 발생에 따른 CriticalSection 적용
+
+2009.07.10	Equip_Handling_TM.c		EQUIP		1014	EQUIP_PICK_FROM_CHAMBER 또는 EQUIP_PLACE_TO_CHAMBER API에서 PrePostPartSkip 변수가 PICK 다음 PLACE시에만 Switch 상태를 확인하여 Message를 Skip하도록 한 기능을 PLACE 다음 PICK시에도 Switch 상태를 확인하여 Message를 Skip할 수 있도록 확장
+
+2009.07.10	sch_subi.c			EQUIP		1014	EQUIP_PICK_FROM_CHAMBER 또는 EQUIP_PLACE_TO_CHAMBER API에서 PrePostPartSkip 변수가 PICK 다음 PLACE시에만 Switch 상태를 확인하여 Message를 Skip하도록 한 기능을 PLACE 다음 PICK시에도 Switch 상태를 확인하여 Message를 Skip할 수 있도록 확장
+
+2009.07.15	sch_PrePost.c			END		1014	HandOff Out Part에서 Alarm등으로 인한 Delay로 인해 End Part의 순서가 Lot별로 바뀔 경우 Process Log Data가 해당 Side별로 관리되지 않는 문제 수정
+
+2009.07.15	MultiJob.c			MULTIJOB	1038	2009.05.11/2009.06.09 수정본에 대한 추가 Bug수정
+
+2009.07.16	DLL_InterfaceSCH.h		DLL		101	_SCH_INF_DLL_CONTROL_ANIMATION_UPDATE_TM API를 추가하여 Wafer Animation이 Update될때 Call되어 MFI에서 추가 조작이 가능하도록 하는 기능 추가
+
+2009.07.16	DLL_InterfaceSCH.c		DLL		101	_SCH_INF_DLL_CONTROL_ANIMATION_UPDATE_TM API를 추가하여 Wafer Animation이 Update될때 Call되어 MFI에서 추가 조작이 가능하도록 하는 기능 추가
+
+2009.07.16	Robot_Animation_TM.c		ANIMATION	101	_SCH_INF_DLL_CONTROL_ANIMATION_UPDATE_TM API를 추가하여 Wafer Animation이 Update될때 Call되어 MFI에서 추가 조작이 가능하도록 하는 기능 추가
+
+2009.07.16	sch_CommonUser.c		DLL		101	_SCH_INF_DLL_CONTROL_ANIMATION_UPDATE_TM API를 추가하여 Wafer Animation이 Update될때 Call되어 MFI에서 추가 조작이 가능하도록 하는 기능 추가
+
+2009.07.16	Sch_Multi_ALIC.c		ALIC		1034	_SCH_PRM_GET_UTIL_FIC_MULTI_WAITTIME OPTION이 -3또는 -13일 경우 FIC의 Slot범위에 맞지 않게 빈 Slot을 Check하는 오류 수정
+
+2009.07.16	main.h				LOG		0	System Log시 추가적으로 Logging할 Item 적용
+
+2009.07.16	prg_code.c			LOG		0	System Log시 추가적으로 Logging할 Item 적용
+
+2009.07.16	sch_run.c			LOG		0	System Log시 추가적으로 Logging할 Item 적용
+
+2009.07.16	sch_prm_log.c			LOG		0	System Log시 추가적으로 Logging할 Item 적용
+
+2009.07.24	sch_run.c			DLL		1026	MAP_VERIFICATION의 loopcount 변수가 잘못 전달되는 문제 수정
+
+2009.07.28	sch_PrePost.c			END		1012	BM에서 Pre End시 Side를 검사하는 부분의 오류 수정
+
+2009.08.04	sch_Macro_FM.c			MACRO		1030	_SCH_MACRO_FM_FINISHED_CHECK 안에서 _SCH_COMMON_FINISHED_CHECK를 Call하지 않는 문제 수정
+
+2009.08.04	sch_Main.c			MACRO		1030	_SCH_MACRO_FM_FINISHED_CHECK 안에서 _SCH_COMMON_FINISHED_CHECK를 Call하지 않는 문제 수정함으로 인해 별도로 _SCH_COMMON_FINISHED_CHECK를 Call하는 부분을 삭제
+
+2009.08.05	sch_Main.c			LOG		0	Randomize Select관련 Log 추가
+
+2009.08.05	sch_Main.c			WAIT		0	WAIT시 진행할 Module이 모두 Disable시 LeaveCriticalSection을 적용하지 않은 Bug 수정
+
+2009.08.05	sch_PrePost.c			BEGIN		1014	Module을 Disable로 하여 Start시 Side_Monitor_Cluster_Count를 잘못 계산하는 문제 수정
+
+2009.08.05	sch_run.c			RECIPE		1030	Unused Cassette를 이용하여 Dummy Run Side를 동작 할 경우 사용 TM의 갯수를 구하는 부분의 Bug수정
+
+2009.08.05	sch_prm_log.c			LOG		0	System Log시 추가적으로 Logging할 Item 적용
+
+2009.08.06	sch_Macro_FM.c			MACRO		0	FM 관련 API에 FM이 없고 TM만 정의된 경우에도 동일한 동작을 할수 있도록 추가
+
+2009.08.06	sch_Macro_Process.c		MACRO		101	Process 시작 시 6장만 Logging하는 문제 수정(MAX_PM_SLOT_DEPTH을 6에서 26으로 확장)
+
+2009.08.21	sch_ProcessMonitor.c		PROCESS		1015	Process가 끝날 때 끝나는 상태를 각 Side별로 가지게 되는데 Side별로 다를 경우 Process Module의 Process상태를 잘못 인식하게 되는 경우가 발생하여 Process가 시작될때 모든 Side의 이전 상태를 Reset해 주는 Routine 추가
+
+2009.08.22	sch_PrePost.c			END		0	End시에 BM의 _SCH_MODULE_Set_Mdl_Use_Flag 상태를 NOTUSE로 하였던 것을 PM과 같이 USE_to_END로 Setting하도록 수정
+
+2009.08.22	sch_PrePost.c			END		1012	End시에 BM이 더이상 사용할 수 없을 경우 _SCH_MODULE_Set_BM_FULL_MODE 를 BUFFER_WAIT_STATION로 Setting하던 것을 없애고 _SCH_COMMON_CHECK_END_PART 를 Call하여 MFI쪽에서 선택적으로 사용할수 있도록 수정
+
+									_SCH_COMMON_CHECK_END_PART 의 Mode별 Call 위치
+
+									2001 - Pre End 를 처리하기 전 (Side별 Critical Section이 적용된 Call)
+									2999 - Pre End 를 처리한 후 (Side별 Critical Section이 적용된 Call)
+
+									0    - End 를 처리하기 전 (Side별 Critical Section이 적용되지 않은 Call)
+									1001 - End 를 처리하기 전 (Side별 Critical Section이 적용된 Call)
+									1998 - End 를 처리하고 해당 Function이 종료 되었는지를 검사하기 전 (Side별 Critical Section이 적용된 Call)
+									1999 - End 를 처리하고 해당 Function이 종료 되었는지를 검사한 후 (Side별 Critical Section이 적용된 Call)
+
+2009.09.18	sch_Macro_FM.c			LOG		1012	FM Robot의 Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.18	sch_Macro_TM.c			LOG		1012	TM Robot의 Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.22	sch_sub.c			LOG		1012	Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.23	sch_sub.c			LOG		1012	Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.23	sch_Macro_Flow.c		DUMMY		1012	Dummy 관련 정보를 DLL에 전달할때 Parameter 내용을 잘못 전달하는 문제 수정
+
+2009.09.23	Equip_Handling_ALIC.c		LOG		1012	AL,IC의 Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.23	sch_Macro_TM.c			LOG		1012	TM Robot의 Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.24	sch_Macro_Process.c		LOG		1012	Process의 Lot Log시 Dummy Wafer에 대한 Log 기능 추가
+
+2009.09.24	User_Parameter.c		RANDOMIZE	1014	Disable로 되어 있는 Module을 가지고 있는 Lot을 Start하였을때 Disable되어있던 Module을 Enable로 바꾸었을때 Randomize Check를 잘못하는 문제 수정
+
+2009.09.24	sch_PrepPost.c			RANDOMIZE	1014	Disable로 되어 있는 Module을 가지고 있는 Lot을 Start하였을때 Disable되어있던 Module을 Enable로 바꾸었을때 Randomize Check를 잘못하는 문제 수정
+
+2009.09.24	sch_ProcessMonitor.c		RANDOMIZE	1014	TM Dual Arm에서 2개 이상의 Wafer가 동시에 Process시 _SCH_CLUSTER_Set_PathRun을 1개의 Wafer만 Setting하므로 Randomize Check를 잘못하는 문제 수정
+
+2009.09.28	MultiJob.c			JOB		1012	Lot Recipe 와 Group 을 포함한 문자가 64자 이상인 Lot을 Job을 통하여 Start시 잘못 동작하는 문제 수정
+
+2009.09.28	sch_RecipeHandling.c		RECIPE		1012	Lot Recipe 와 Group 을 포함한 문자가 64자 이상인 Lot을 Job을 통하여 Start시 잘못 동작하는 문제 수정
+
+2009.09.28	Timer_Handling.c		TIMER		0	FM Robot의 A 또는 B Arm 중 Arm에 상관 없이 마지막에 동작한 Arm에 대한 동작 시간을 저장할수 있도록 기능 추가
+
+2009.10.13	Gui_Hand_Interlock.c		GUI		0	Arm Interlock Option 갯수 확장
+
+2009.10.13	sch_RecipeHandling.c		RANDOMIZE	1038	Disable로 되어 있는 Module을 가지고 있는 Lot을 Start하였을때 Disable되어있던 Module의 초기 상태를 Setting하도록 수정
+
+2009.10.14	sch_PrepPost.c			RANDOMIZE	1014	Disable로 되어 있는 Module을 가지고 있는 Lot을 Start하였을때 Disable되어있던 Module을 Enable로 바꾸었을때 Randomize Check를 잘못하는 문제 수정
+
+2009.10.15	User_Parameter.c		RANDOMIZE	1038	PM Mode가 다른 Side의 Lot을 Start시 Randomize Check를 잘못하는 문제 수정
+
+2009.10.15	sch_subi.c			RANDOMIZE	1038	PM Mode가 다른 Side의 Lot을 Start시 Randomize Check를 잘못하는 문제 수정
+
+2009.10.28	sch_PrepPost.c			RANDOMIZE	1014	Disable로 되어 있는 Module을 가지고 있는 Lot을 Start하였을때 Disable되어있던 Module을 Enable로 바꾸었을때 Randomize Check를 잘못하는 문제 수정(추가)
+
+2009.10.30	Equip_Handling_Process.c	PROCESS		1012	Recipe Locking의 사용시 Recipe Type을 Name으로 하였을 경우 Recipe File을 찾지 못해 Error가 발생하는 문제 수정
+
+2009.11.06	sch_Main.c			LOG		0	Deadlock Log 생성이 Lotlog Folder에 화면도 같이 저장하는 기능 추가
+
+2009.12.29	sch_Macro_Flow.c		DUMMY		1012	Dummy 관련 다음 Wafer 진행시 잘못 된 Wafer가 진행되는 문제 수정
+
+2010.01.19	sch_HandOff.c			JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 HandOff Part를 Skip하도록 수정
+
+2010.01.19	sch_RecipeHandling.c		JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.01.19	sch_Run.c			JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.01.19	sch_CassMap.c			JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.01.19	sch_Sub.c			JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.01.19	sch_Tag.c			JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.01.19	sch_Macro_Flow.c		DUMMY		1012	DLL에서 Dummy 관련 Skip시 잘못 동작하는 문제 수정
+
+2010.01.21	sch_PrePost.c			RANDOMIZE	1030	Chamber의 End Part에서 Randomize와 관련이 없는 경우에도 Randomize Check를 하여 End 된 Chamber의 Mode가 달라 오동작 하는 문제 수정
+
+2010.01.26	sch_Macro_Flow.c		DUMMY		1012	Dummy 관련 Wafer Pre/Post의 경우 추월금지가 잘못 적용되어 Wafer가 이어서 진행하지 않는 문제 수정
+
+2010.01.26	Event_Handling.c		EVENT		1038	SET_PROCESSING Event 추가(Lot이 진행중 강제로 Process를 할 수 있는 기능)
+
+2010.01.27	Equip_Handling.c		EQUIP		1014	_SCH_EQ_POSTSKIP_CHECK_AFTER_POSTRECV api에서 "PRESKIP" 을 확인할 수 있는 interface 추가
+
+									return 값이 10 보다 클경우 PRESKIP이고 POSTSKIP은 10으로 나눈 몫을 가지고 확인
+
+2010.01.27	Equip_Handling_PROCESS.c	TUNING		1014	Tuning Data를 RchHandler에 전달시 Process Message보다 Tuning Data가 먼저 처리되어 Tuning Data가 적용되지 않는 문제 수정
+
+									RchHandler에서 Tuning Data를 받았을때 바로 처리 하지 않고 사용자 처리 내용을 포함하였을때 발생
+
+2010.01.27	Equip_Handling_TM.c		ANIMATION	1014	PICK , PLACE시에는 Robot Animation을 하지만 MOVE_SEND , MOVE_RECV시에 Robot Animation을 하지 않는 Option추가
+
+2010.01.27	Gui_Hand_Module.c		ANIMATION	1014	PICK , PLACE시에는 Robot Animation을 하지만 MOVE_SEND , MOVE_RECV시에 Robot Animation을 하지 않는 Option추가
+
+2010.01.28	sch_Macro_FM.c			MACRO		0	FM을 사용하지 않는 경우 FM관련 Macro API를 사용하였을때 FM Robot을 사용하지 않고 TM Robot을 사용하도록 하는 기능 추가
+
+2010.02.01	sch_Macro_Flow.c		DUMMY		1012	Dummy 관련 Post Process 를 하지 않고 Wafer가 return되는 문제 수정
+
+2010.02.02	sch_Macro_FM.c			MACRO		0	FM을 사용하지 않는 경우 FM관련 Macro API를 사용하였을때 FM Robot을 사용하지 않고 TM Robot을 사용하도록 하는 기능 추가(추가)
+
+2010.02.02	sch_Macro_Flow.c		DUMMY		1012	Dummy 관련 Lot Pre/Post Recipe 내용이 많을 경우 오동작 수정
+
+2010.02.02	sch_Macro_Process.c		MACRO		1012	Wafer Post Process 중에 Lot Post process가 중복되어 진행하는 문제 수정
+
+2010.02.03	sch_Macro_Flow.c		DUMMY		1012	Dummy 관련 Recipe 저장 공간의 부족으로 Debug 발생 수정(동적 할당으로 변경)
+
+2010.02.08	MultiJob.c			JOB		1012	Process Job의 갯수를 50에서 300으로 확장한 기능 추가
+
+2010.02.10	sch_PrePost.c			RANDOMIZE	1012	Chamber의 End Part에서 Randomize와 관련이 없는 경우에도 Randomize Check를 하여 End 된 Chamber의 Mode가 달라 오동작 하는 문제 수정(추가)
+
+2010.02.19	IO_Part_Data.c			JOB		1012	BM 에서 Lot을 Start할때 BM에서 Start한 Lot을 위한 IO 추가(CTC.MAIN_BM_CONTROL%s,CTC.MAIN_BM_STATUS%s)
+
+2010.02.28	sch_OneSelect.c			DUMMY		1012	Cluster Depth를 모두 사용하는 Wafer의 경우 Recipe Data를 재 배치 할때 마지막 Cluster Depth Data가 삭제되어 오동작 하는 문제 수정
+
+
+//====================================================================================================================================================================================================================================
+// MFI part
+//====================================================================================================================================================================================================================================
+// Date		File				Group(ALG)		Info
+//====================================================================================================================================================================================================================================
+2009.04.02	sch_A0_Run_F_SW.c		AL0		1026	Dummy Wafer가 복귀 후 DataBase에서 삭제하는 Routine추가
+
+2009.04.06	sch_A0_Run.c			AL0		1014	Double Arm의 Wafer가 Return Wafer시 두장이 Return된 후 한장만 다시 동작하는 문제 수정
+
+2009.04.07	sch_A0_sub.c			AL0		1034	Switch Mode의 BatchType에서 (BM1->BM2)에서 이전 Lot의 마지막 Wafer와 다음 Lot의 첫번째 Wafer가 TM에서 순서 바뀌거나 Deadlock발생하는 문제 수정
+
+2009.04.08	sch_A0_sub.c			AL0		1012	두 Wafer의 Different Path 를 Check하는 과정에서 TM들이 동시 사용하는 PM은 Check시 제외 하도록 수정
+
+2009.04.14	sch_A0_Run_F_Def.c		AL0		1034	Buffer의 TM_SIDE,FM_SIDE시 Abort가 되어도 계속 동작하는 문제 수정
+
+2009.04.23	sch_A0_Run_F_SW.c		AL0		1038	Disappear기능 적용
+
+2009.04.24	sch_A0_CommonUser.c		AL0		1038	Switch Mode의 BatchType에서 Waiting에서 Running으로 바뀌는 시점 조정 (BM1->BM2)
+
+2009.04.27	sch_A0_CommonUser.c		AL0		1038	Switch Mode의 BatchType에서 Waiting에서 Running으로 바뀌는 시점 조정
+
+2009.05.14	sch_A0_Run.c			AL0		1038	Switch Mode의 BatchType에서 (BM1->BM2) STOPW나 ENDW시 Pausing에서 Paused로 바뀌는 시점 변경
+
+2009.05.21	sch_A0_Run_F_SW.c		AL0		1038	Disappear기능 보완
+
+2009.06.11	sch_A0_Dll.c			AL0-S4		1012	Lot PrePost , Wafer Pre Post의 Skip Check를 위한 DLL 추가
+
+2009.06.11	sch_A0_sub_Sp4.c		AL0-S4		1012	Lot PrePost , Wafer Pre Post의 Skip Check를 위한 DLL Interface 추가
+
+2009.06.18	sch_A0_sub.c			AL0		1012	Batch Stock(INS) 기능 사용시 BM에 있는 Wafer중 순서가 빠른 Wafer를 잘못 찾아내는 문제 수정
+
+2009.06.28	sch_A0_sub.c			AL0		1012	하나의 PM을 여러 TM에서 Pick,Place가 가능할 때 관계가 없은 PM이 존재하는 TM이 Pick,Place하는 문제 수정
+
+2009.07.01	sch_A0_sub.c			AL0		1014	Interlock TMS 3에 대한 추가 보완 Check 추가
+
+2009.07.03	sch_A0_sub.c			AL0		1012	Batch Stock(INS) 기능 사용시 BM에 있는 Wafer중 순서가 빠른 Wafer를 잘못 찾아내는 문제 수정
+
+2009.07.03	sch_A6_Run_Cyclon.c		AL6		1026	Multi PM Type Wafer Check 오류 수정
+
+2009.07.07	sch_A0_CommonUser.c		AL0		101	_SCH_PRM_GET_UTIL_MESSAGE_USE_WHEN_ORDER() 을 3으로 정의할 경우 사용자 정의 ORDER Message(_SCH_CLUSTER_Get_PathDo( side , pt ) + ( _SCH_CLUSTER_Get_Extra( side , pt ) * 100 ) ))를 전달하도록 추가
+
+2009.07.08	sch_A0_sub.c			AL0		1012	SCHEDULER_CONTROL_Chk_WAIT_SUPPLY_OR_RETURN_WAFER 에서 BM의 Module상태를 확인하지 않는 문제 수정
+
+2009.07.10	sch_A0_sub_F_sw			AL0		0	Cassette에서 Wafer Supply시 공정할 Module이 하나도 없을 경우 Wafer Supply자체를 못하도록 하는 Routine추가
+
+2009.07.12	sch_A0_sub.c			AL0		1014	Randomize로 Disable인 Module에 대해 Pre End가 미리 발생하는 문제 수정
+
+2009.07.15	sch_A0_Run.c			AL0		1014	EQUIP_PICK_FROM_CHAMBER 또는 EQUIP_PLACE_TO_CHAMBER API에서 PrePostPartSkip 변수가 PICK 다음 PLACE시에만 Switch 상태를 확인하여 Message를 Skip하도록 한 기능을 PLACE 다음 PICK시에도 Switch 상태를 확인하여 Message를 Skip할 수 있도록 확장
+
+2009.07.17	sch_A0_Run.c			AL0		1014	EQUIP_PICK_FROM_CHAMBER 또는 EQUIP_PLACE_TO_CHAMBER API에서 PrePostPartSkip 변수가 PICK 다음 PLACE시에만 Switch 상태를 확인하여 Message를 Skip하도록 한 기능을 PLACE 다음 PICK시에도 Switch 상태를 확인하여 Message를 Skip할 수 있도록 확장
+
+2009.07.17	sch_A0_sub.c			AL0		1014	Switch상태 Check시 Arm Interlock도 병행하여 Check하는 Routine추가
+
+2009.07.22	sch_A0_Run_F_DBL1.c		AL0		1014	Cassette Supply를 못하도록 Check되었을때 강제적으로 TMSIDE로 바꾸어 주는 Routine 추가
+
+2009.07.22	sch_A0_sub_Sp4.c		AL0-S4		1012	Lot PrePost , Wafer Pre Post의 Skip Check를 위한 DLL Interface Prototype 변경 및 User Spec 오류 수정
+
+2009.07.24	sch_A0_CommonUser.c		AL0		1034	Switch Mode의 BatchType에서 LoopCount시 지정한 BM으로 동작하지 않는 문제 수정 (BM1->BM2)
+
+2009.07.28	sch_A0_Run.c			AL0		1034	Switch Mode의 경우에 BatchType이 아닌 경우 STOP의 적용이 늦게 되는 문제 수정
+
+2009.07.28	sch_A0_Run.c			AL0		1014	Pick시 Switch상태가 아닌데 Switch상태로 판단하는 경우를 수정하기 위해 미리 Switch 상태인지 Check하는 부분 추가
+
+2009.08.04	sch_A4_Run.c			AL4		1030	MFI변경이 Dummy 관련 검사를 하지않는 부분 수정
+
+2009.08.04	sch_A4_Run_F.c			AL4		1030	MFI변경이 Dummy 관련 검사를 하지않는 부분 수정
+
+2009.08.05	sch_A0_Run_F_SW.c		AL0		1014	Double Arm의 Dummy Wafer를 TM이 같이 Pick하지 않는 문제 수정
+
+2009.08.07	sch_A0_Run.c			AL0		1014	FM Double의 MiddleSwap Type에서 BM이 모두 Wafer를 가지고 있을 경우 강제로 BM을 FMSide로 만들어 주는 Routine 추가
+
+2009.08.18	sch_A0_Run_F_SW.c		AL0		1014	FM Double의 MiddleSwap Type에서 TMS가 Setting되어 있는 경우 TM에서 BM에 Wafer를 Place한 후 Switch상태가 아닐때 BM에 공급될 Wafer가 있더라도 강제로 BM을 FMSide로 만들어 주는 Routine 추가
+
+2009.08.21	sch_A0_sub.c			AL0		1012	BM에 대해 _SCH_MODULE_Get_Mdl_Use_Flag 의 상태를 추가로 Check하여 시작시 BM을 Disable/DisableHW로 하여 시작한 경우 동작중 Enable되어도 사용하지 못하도록 하는 Routine 추가
+
+2009.08.22	sch_A0_sub.c			AL0		1012	BM에 대해 _SCH_MODULE_Get_Mdl_Use_Flag 의 상태를 추가로 Check하여 시작시 BM을 Disable/DisableHW로 하여 시작한 경우 동작중 Enable되어도 사용하지 못하도록 하는 Routine 추가
+
+2009.08.22	sch_A0_F_sw.c			AL0		1012	BM에 대해 _SCH_MODULE_Get_Mdl_Use_Flag 의 상태를 추가로 Check하여 시작시 BM을 Disable/DisableHW로 하여 시작한 경우 동작중 Enable되어도 사용하지 못하도록 하는 Routine 추가(SCHEDULING_CHECK_OtherBM_TMSIDE_and_Remain_One_for_Switch API에서)
+
+2009.08.25	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 Deadlock이 생기는 경우에 대한 수정
+
+2009.08.26	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 Deadlock이 생기는 경우에 대한 수정
+
+2009.08.26	sch_A0_sub.c			AL0		1012	Wafer별로 ExtraFlag의 3번 Tag를 이용하여 해당 Wafer가 특정 BM에 In되고 특정 BM으로 Out될 수 있도록 하는 기능 추가(SubAlgorithm 4 에만 적용되고 SCHEDULER_CONTROL_Fixed_BM_Run_Check_A0SUB4 API를 통하여 Check)
+
+2009.08.26	sch_A0_sub_Sp4.c		AL0-S4		1012	Wafer별로 ExtraFlag의 3번 Tag를 이용하여 해당 Wafer가 특정 BM에 In되고 특정 BM으로 Out될 수 있도록 하는 기능 추가(SubAlgorithm 4 에만 적용되고 SCHEDULER_CONTROL_Fixed_BM_Run_Check_A0SUB4 API를 통하여 Check)
+
+2009.08.27	sch_A0_CommonUser.c		AL0		1012	Wafer별로 ExtraFlag의 3번 Tag를 이용하여 해당 Wafer가 특정 BM에 In되고 특정 BM으로 Out될 수 있도록 하는 기능 추가(SubAlgorithm 4 에만 적용되고 SCHEDULER_CONTROL_Fixed_BM_Run_Check_A0SUB4 API를 통하여 Check)
+
+2009.08.27	sch_A0_F_Def.c			AL0		1012	Wafer별로 ExtraFlag의 3번 Tag를 이용하여 해당 Wafer가 특정 BM에 In되고 특정 BM으로 Out될 수 있도록 하는 기능 추가(SubAlgorithm 4 에만 적용되고 SCHEDULER_CONTROL_Fixed_BM_Run_Check_A0SUB4 API를 통하여 Check)
+
+2009.09.01	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 FM Robot이 BM에서 Pick시 순서가 바뀌어 Pick하는 문제 수정
+
+2009.09.02	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 FM Robot이 BM에서 Pick시 순서가 바뀌어 Pick하는 문제 수정
+
+2009.09.03	sch_A0_sub.c			AL0		1012	BM을 Disable로 시작하여 Running중 Enable하여 사용하는 Lot과 BM을 계속 Enable로 사용하는 Lot이 동시 진행중 Deadlock발생하는 문제 수정
+
+2009.09.10	sch_A0_Run.c			AL0		1039	TM Robot이 특정 PM에 Place할 Wafer를 2장 모두 들고 있고 Place할 특정 PM이 Post Processing중에서 Post Processing이 종료되어 TM Robot의 Wafer를 PM에 Place시 순서가 바뀌는 문제 수정
+
+2009.09.10	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 FM Robot이 BM에서 Pick시 순서가 바뀌어 Pick하는 문제 수정
+
+2009.09.10	sch_A4_CommonUser.c		AL4		1014	Wafer가 1장만 공정시 이전의 Lot과 Randomize인 경우 공급 Lot의 순서가 바뀌는 문제 수정
+
+2009.09.11	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 FM Robot이 BM에서 Pick시 순서가 바뀌어 Pick하는 문제 수정
+
+2009.09.15	sch_A4_Run.c			AL4		1014	한 PM에 서로 다른 Side의 Wafer를 공급 하려고 할때 Lot Pre의 동작이 필요할 경우 잘못 동작하는 문제 수정
+
+2009.09.18	sch_A4_Run.c			AL4		1014	한 PM에 서로 다른 Side의 Wafer를 공급 하려고 할때 Lot Pre의 동작이 필요할 경우 잘못 동작하는 문제 수정
+
+2009.09.19	sch_A0_sub.c			AL0-S4		1012	Wafer별로 ExtraFlag의 3번 Tag를 이용하여 해당 Wafer가 특정 BM에 In되고 특정 BM으로 Out될 수 있도록 하는 기능 추가(SubAlgorithm 4 에만 적용되고 SCHEDULER_CONTROL_Fixed_BM_Run_Check_A0SUB4 API를 통하여 Check) - 시작시 검사 오류 수정
+
+2009.09.23	sch_A0_Run.c			AL0		1012	Switch Mode의 BatchType에서 Job Stop에 의한 Deadlock 상황 수정(SCHEDULING_CHECK_SWITCHING_LOCK_MAKE_FREE_SUB1_BATCH 이용)
+
+2009.09.28	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 Side별로 BM의 _SCH_MODULE_Get_Mdl_Use_Flag를 Check하도록 수정
+
+2009.09.28	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 FM Robot이 BM에서 Place시 오래동안 사용하지 않은 BM부터 Place 하도록 수정(SCHEDULER_CONTROL_Chk_BM_LOW_BLANKINTIME 이용)
+
+2009.10.06	sch_A0_Run_F_SW.c		AL0		1012	FM에서 Wafer의 공급이 가능한지 Check하는 부분의 오류 수정
+
+2009.10.14	sch_A0_sub_Sp4.c		AL0-S4		1012	FM에서 Wafer의 공급이 가능한지 Check하는 부분의 오류 수정
+
+									1S Mode에서 Lot 별로 진행 할 수 있는 BM을 지정할 경우 해당 BM만 Access하는 기능 추가
+
+2009.10.15	sch_A0_Run_F_SW.c		AL0		1012	FM에서 Wafer의 공급이 가능한지 Check하는 부분의 오류 수정(_SCH_SUB_Remain_for_FM를 _SCH_MACRO_FM_POSSIBLE_PICK_FROM_FM로 바꾸어 사용)
+
+2009.10.15	sch_A0_Run_F_SW.c		AL0		1014	TM Double이고 MiddleSwap Mode에서 FM Robot이 Wafer를 BM에 Place후 Pick할때 Arm Interlock Option을 이용하여 새로운 Sequence 추가 적용
+
+2009.10.15	sch_A0_sub_F_sw.c		AL0		1014	TM Double이고 MiddleSwap Mode에서 FM Robot이 Wafer를 BM에 Place후 Pick할때 Arm Interlock Option을 이용하여 새로운 Sequence 추가 적용
+
+2009.10.15	sch_A0_sub_F_sw.c		AL0		1012	FM에서 Wafer의 공급이 가능한지 Check하는 부분의 오류 수정(_SCH_SUB_Remain_for_FM를 _SCH_MACRO_FM_POSSIBLE_PICK_FROM_FM로 바꾸어 사용)
+
+2009.10.30	sch_A0_Sub_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 TM Robot이 BM에서 Pick시 Switch상황에서 Pick을 안하는 문제 수정
+
+2009.11.05	sch_A0_F_Def.c			AL0		1012	FM에서 BM에 Place시 BM의 Mode(Side별로 사용할지 않할지)를 검사하는 기능 추가
+
+2009.11.05	sch_A0_sub.c			AL0		1012	동일한 Chamber를 연속 방문하는 Wafer의 경우 추월금지가 정상적으로 적용되지 않는 문제 수정
+
+2009.11.05	sch_A0_sub.c			AL0		1012	중복되지 않는 Chamber를 사용하는 Wafer끼리 추월금지가 적용되어 BM에서 Wafer가 바로 공급되지 않는 문제 수정
+
+2009.11.09	sch_A0_sub.c			AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 여러개의 BM사용시 TM 에서 BM에 Place할려고 할 때 잘못된 곳에 Place또는 Deadlock이 생기는 문제 수정
+
+2009.11.20	sch_A0_Run.c			AL0		1012	Switch Mode의 BatchType에서 Job Stop에 의한 Deadlock 상황 수정(SCHEDULING_CHECK_SWITCHING_LOCK_MAKE_FREE_SUB1_BATCH 이용)의 추가 수정
+
+2009.12.19	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 BM의 Slot갯수가 1인 경우 여러개의 BM사용시 Wafer가 TM에만 있을 경우 모든 BM을 TMSIDE로 바꾸어 추가적으로 Lot Start시 FMSIDE 되어있는 BM이 없어서 Deadlock이 걸리는 문제 수정
+
+2009.12.23	sch_A0_Sub_F_SW.c		AL0		1038	Switch Mode의 BatchType에서 FM에서 공급할 공간이 있는 BM이 있는데도 다른 BM에 Wafer가 모두 처리될때 까지 진행하지 않는 문제 수정
+
+2009.12.26	sch_A0_sub.c			AL0		1012	PathThru용 추월금지가 1S또는 Switch Routine에 적용되어 Deadlock이 발생하는 문제 수정
+
+2009.12.26	sch_A0_sub_Sp4.c		AL0-S4		1012	1S Mode에서 User Post,Pre가 미리 발생하는 문제 수정
+
+2010.01.17	sch_A0_Run_F_SW.c		AL0		1012	1S Mode에서 TM,PM에 Wafer가 없는 데 모든 BM이 TM Side이여서 FM으로 부터 새로운 Wafer를 공급할 수 없어 Deadlock이 발생하는 문제 수정
+
+2010.01.19	sch_A0_CommonUser.c		AL0		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.01.19	sch_A0_Run_F_SW.c		AL0		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.02.01	sch_A0_CommonUser.c		AL0		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.02.01	sch_A0_Param.c			AL0		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.02.01	sch_A0_Run.c			AL0		1012	DUMMY관련 Post Process를 하지 않고 Wafer가 Return되는 문제 수정
+
+2010.02.01	sch_A0_Run.c			AL0		1012	BM 에서 Lot을 Start할때 BM에서 Start한 경우 추가
+
+2010.02.10	sch_A0_sub_Sp4.c		AL0-S4		1012	1S Mode에서 Cluster Index가 다른 경우 이전 Cluster Index는 Lot Pre만 있고 새로운 Cluster Index는 Lot Post만 있을 경우 새로운 Cluster Index의 Lot Post가 동작하지 않는 문제 수정
+
+2010.02.20	sch_A0_Run_F_DBL1.c		AL0		1014	FM의 MOVE_RECV기능 추가
+
+2010.02.23	sch_A0_CommonUser.c		AL0		1012	1S Mode에서 시간차를 작게하고 Start시 두번째 Lot의 Wafer를 한장만 진행할 경우 Deadlock또는 TMSIDE 오동작 관련 수정
+
+2010.02.23	sch_A0_sub_Sp4.c		AL0-S4		1012	1S Mode에서 이전Lot의 Lot Post Part가 수행중 새로운 Lot을 Start했을 경우 User Post , Pre가 올바르게 동작하지 않는 문제 수정
+
+2010.02.26	sch_A0_Sub.c			AL0		1012	DUMMY에서 Wafer Pre,Post가 추월 금지가 적용되지 않아 Wafer의 순서가 바뀌는 문제 수정
+
+2010.02.28	sch_A0_CommonUser.c		AL0		1012	1S Mode에서 시간차를 작게하고 Start시 두번째 Lot의 Wafer를 한장만 진행할 경우 Deadlock또는 TMSIDE 오동작 관련 수정(추가)
+
