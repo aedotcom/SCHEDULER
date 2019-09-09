@@ -3128,7 +3128,7 @@ int _i_EIL_SIDE_BEGIN( int side , char *jobname , char *midname , char *ppid_rec
 		//
 		if ( STRNCMP_L( ppid_recipename , "<MANUAL>" , 8 ) ) {
 			//
-			strcpy( ppid , ppid_recipename + 8 );
+			//strcpy( ppid , ppid_recipename + 8 );
 			strcpy( ppid , ppid_recipename[8]=NULL );
 			//
 		}
