@@ -42,6 +42,51 @@ void SCHMULTI_SET_LOG_MESSAGE( char *data );
 void _EIL_LOG_LOT_PRINTF( int M , int Slot , LPSTR list , ... );
 int _i_EIL_OPERATE_REQUEST_TM_TO_EIL( int bm );
 
+int _EIL_FMMODE_INSERT_SET_DATA( int s , int p , int w , int *id );
+int _EIL_FMMODE_INF_GET_BMALLSTATUS( int ch , int SlotSize , int *ModeData , int *SlotData , int *UniqueData );
+int _EIL_FMMODE_INF_GET_BMMODESTATUS( int ch );
+void _EIL_FMMODE_INIT( int apmode , int side );
+int _EIL_FMMODE_RUN_CONTROL_TM( int side );
+int _EIL_FMMODE_RUN_CONTROL_FM_to_TM_CONDITION( int bmc );
+int _EIL_FMMODE_RUN_CONTROL_FM( int side );
+int _EIL_FMMODE_MACRO_CHECK_PROCESSING( int ch ) ;
+int  _EIL_FMMODE_EQ_BEGIN_END_STATUS( int ch );
+int _EIL_COMMON_ENTER_CONTROL_FEM( int side , int mode );
+void _EIL_BEFORE_ENTER_CONTROL_TM( int side , int mode );
+void _EIL_BEFORE_RUN_CONTROL_TM_1( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_2( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_3( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_4( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_5( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_6( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_7( int side ) ;
+void _EIL_BEFORE_RUN_CONTROL_TM_8( int side ) ;
+void _EIL_IO_NOTUSE_STATUS(void);
+void INIT_SCHEDULER_EIL_DATA( int apmode , int side ) ;
+void EIL_Chk_Local_Time_for_File( char *buffer , int Sep );
+void EIL_LOT_TIMER_MAKE_SLOT_FOLDER( int side , int slot , char *data , char *wid );
+void EIL_SCHEDULER_LOG_FOLDER( char *Buffer , char *recipefile , char *jobid , char *midid );
+int EIL_BM_USE_POSSIBLE( int bm , int prcchk );
+int EIL_BM_TMSIDE_STATUS( int bm );
+int EIL_BM_WAIT_STATUS( int bm );
+int EIL_BM_WAIT_STATUS( int bm );
+int EIL_BM_DISABLE_STATUS( int bm );
+int _EIL_COMMON_RUN_CONTROL_FEM( int side );
+int EIL_METHOD_GET_INSERT_POS( int *side , int *pt , int *lusp , int incm , int wafer ) ;
+int EIL_MAKE_DATABASE( int side , int pt , int lastsp , int cm , int wafer );
+int _i_EIL_SIDE_LOTPOST_RUN( int CHECKING_SIDE );
+int _i_EIL_SIDE_LOTPREUPDATE( int side );
+int _i_EIL_SIDE_BEGIN( int side , char *jobname , char *midname , char *ppid_recipename , char *elsestr );
+int _i_EIL_SIDE_END( int side , char *message );
+int _EIL_INSERT_DATA_REMAP( int side , int pt );
+void _i_EIL_METHOD_SET_WAFER_NUMBERING( int data );
+int _i_EIL_METHOD_GET_WAFER_NUMBERING( int maxid );
+void _i_EIL_METHOD_INSERT_BLANK( int CHECKING_SIDE , int Pt , int Chamber , int Slot );
+void _i_EIL_SET_FINISH( int side );
+void _i_EIL_PM_INFO_TAG_Make_PM_Mdl_String( char *strbuffer );
+void _EIL_EVENT_DATA_LOG( char *eventall , int Res , char *mdldata_pre );
+int _EIL_EVENT_RECEIVED_OPERATION( char *Command , int bm , int slot , char *message , char *eventall );
+
 //------------------------------------------------------------------------------------------
 /*
 1) System.cfg
@@ -254,7 +299,8 @@ int		BM_EIL_AUTO_TMSIDE[ MAX_BM_CHAMBER_DEPTH ]; // 2012.04.27
 //----------------------------------------------------------------------------
 int		PM_EIL_ENABLE_CONTROL[ MAX_CHAMBER ]; // 2011.07.25
 //----------------------------------------------------------------------------
-extern int		_EIL_WAFER_NUMBERING = 0; // 2012.03.23
+extern int		_EIL_WAFER_NUMBERING ; // 2012.03.23
+_EIL_WAFER_NUMBERING = 0;
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 BOOL	SCHEDULER_LOG_FOLDER( int CHECKING_SIDE , char *Buffer , char *recipefile );
@@ -296,7 +342,6 @@ extern int _EIL_FMMODE_INSERT_PT[_EIL_FMMODE_INSERT_MAX_COUNT];
 extern int _EIL_FMMODE_INSERT_WFR[_EIL_FMMODE_INSERT_MAX_COUNT];
 extern int _EIL_FMMODE_INSERT_USE[_EIL_FMMODE_INSERT_MAX_COUNT];
 extern int _EIL_FMMODE_INSERT_ID[_EIL_FMMODE_INSERT_MAX_COUNT];
-
 
 int _EIL_FMMODE_INSERT_SET_DATA( int s , int p , int w , int *id ) {
 	//
