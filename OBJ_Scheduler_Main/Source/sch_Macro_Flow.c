@@ -30,6 +30,8 @@
 
 #include "INF_sch_macro.h"
 #include "INF_sch_CommonUser.h"
+
+#include "sch_Macro_Flow.h"
 //================================================================================
 extern int  _in_HOT_LOT_ORDERING_INVALID[MAX_CASSETTE_SIDE]; // 2011.06.13
 //================================================================================
