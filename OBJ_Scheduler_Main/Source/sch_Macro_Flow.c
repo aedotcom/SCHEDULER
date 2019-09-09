@@ -36,15 +36,16 @@ extern int  _in_HOT_LOT_ORDERING_INVALID[MAX_CASSETTE_SIDE]; // 2011.06.13
 extern int  _in_FM_PICK_POSSIBLE_LAST_RETURNCODE[MAX_CASSETTE_SIDE]; // 2014.10.14
 //================================================================================
 int Get_Inside_Value_for_Common_Thread_Status( int side , int where ); // 2008.07.29
+void Init_Inf_Dummy_PostWait(void);
 //================================================================================
 extern int  _SCH_TAG_DUMMY_FLOW_CH;
 extern int  _SCH_TAG_DUMMY_FLOW_SLOT;
 extern Scheduling_Path	_SCH_INF_CLUSTER_DATA_AREA[ MAX_CASSETTE_SIDE ][ MAX_CASSETTE_SLOT_SIZE ];
 //================================================================================
-int Inf_Dummy_PostWait_Use[32];
-int Inf_Dummy_PostWait_Mode[32];
-int Inf_Dummy_PostWait_Value[32];
-char *Inf_Dummy_PostWait_Name[32];
+extern int Inf_Dummy_PostWait_Use[32];
+extern int Inf_Dummy_PostWait_Mode[32];
+extern int Inf_Dummy_PostWait_Value[32];
+extern char *Inf_Dummy_PostWait_Name[32];
 //================================================================================
 
 void Init_Inf_Dummy_PostWait() {
@@ -1353,7 +1354,7 @@ _IO_CONSOLE_PRINTF( "FLOWCTL-POST.WAIT\t[Side=%d][pt=%d][AppPt=%d][orgpt=%d]\n" 
 				//==========================================================================================================
 				// 2010.02.10
 				//==========================================================================================================
-				// 10 , 3	ÇöÀç DummyÀÇ ´ÙÀ½ Mode
+				// 10 , 3	ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Mode
 				//	---+--------+--------+---------+---------+-------------------------------------------+
 				//	   | LotPre | WfrPre | WfrPost | LotPost | Pre Condition                             |
 				//	---+--------+--------+---------+---------+-------------------------------------------+
@@ -1379,39 +1380,39 @@ _IO_CONSOLE_PRINTF( "FLOWCTL-POST.WAIT\t[Side=%d][pt=%d][AppPt=%d][orgpt=%d]\n" 
 					//
 					x = ( _i_SCH_CLUSTER_Get_PathRun( side , Org_Main_Pointer , 14 , 4 ) * 100 ) + _i_SCH_CLUSTER_Get_PathRun( side , Org_Main_Pointer , 14 , 3 ) + 1;
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 3 , x % 100 );	// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 4 , x / 100 );	// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 3 , x % 100 );	// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 4 , x / 100 );	// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 15 , 3 , 0 );			//
 					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 15 , 4 , 0 );			//
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , x % 100 );					// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , x / 100 );					// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , x % 100 );					// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , x / 100 );					// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 3 , 0 );						//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 4 , 0 );						//
 				}
 				else {
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 10 , 3 , mode + 1 );	// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Mode
-					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 3 , 0 );			// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 4 , 0 );			// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 10 , 3 , mode + 1 );	// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Mode
+					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 3 , 0 );			// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 14 , 4 , 0 );			// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 15 , 3 , 0 );			//
 					_i_SCH_CLUSTER_Set_PathRun( side , Org_Main_Pointer , 15 , 4 , 0 );			//
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , 0 );						// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , 0 );						// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , 0 );						// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , 0 );						// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 3 , 0 );						//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 4 , 0 );						//
 				}
 				//
 				if ( mode == 2 ) { // wafer post
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 4 ); // ÇöÀç DummyÀÇ ´ÙÀ½ Mode
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 4 ); // ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Mode
 				}
 				else {
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 8 ); // ÇöÀç DummyÀÇ ´ÙÀ½ Mode
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 8 ); // ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Mode
 				}
 				//
 				//==========================================================================================================
@@ -1473,39 +1474,39 @@ _IO_CONSOLE_PRINTF( "FLOWCTL-SETDO\tCASE12 [Side=%d,Pt=%d]\n" , side , i );
 					//
 					x = ( _i_SCH_CLUSTER_Get_PathRun( side , pointer , 14 , 4 ) * 100 ) + _i_SCH_CLUSTER_Get_PathRun( side , pointer , 14 , 3 ) + 1;
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 3 , x % 100 );				// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 4 , x / 100 );				// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 3 , x % 100 );				// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 4 , x / 100 );				// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 15 , 3 , 0 );						//
 					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 15 , 4 , 0 );						//
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , x % 100 );						// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , x / 100 );						// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , x % 100 );						// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , x / 100 );						// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 3 , 0 );							//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 4 , 0 );							//
 				}
 				else {
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 10 , 3 , mode + 1 );				// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Mode
-					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 3 , 0 );						// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 4 , 0 );						// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 10 , 3 , mode + 1 );				// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Mode
+					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 3 , 0 );						// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 14 , 4 , 0 );						// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 15 , 3 , 0 );						//
 					_i_SCH_CLUSTER_Set_PathRun( side , pointer , 15 , 4 , 0 );						//
 					//
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , 0 );							// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count1
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , 0 );							// ÇöÀç Mode·Î »ç¿ëÇÑ DummyÀÇ Count2
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 3 , 0 );							// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count1
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 14 , 4 , 0 );							// ï¿½ï¿½ï¿½ï¿½ Modeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ Count2
 					//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 3 , 0 );							//
 					_i_SCH_CLUSTER_Set_PathRun( side , i , 15 , 4 , 0 );							//
 				}
 				//
 				if ( mode == 0 ) { // lot Pre
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 1 ); // ÇöÀç DummyÀÇ ´ÙÀ½ Mode
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 1 ); // ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Mode
 				}
 				else {
-					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 2 ); // ÇöÀç DummyÀÇ ´ÙÀ½ Mode
+					_i_SCH_CLUSTER_Set_PathRun( side , i , 10 , 3 , ( rcpcheck > 0 ) ? cmd : cmd - 2 ); // ï¿½ï¿½ï¿½ï¿½ Dummyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Mode
 				}
 				//
 				//==========================================================================================================
@@ -1656,7 +1657,7 @@ _IO_CONSOLE_PRINTF( "FLOWCTL-SEL.POST2\t[Side=%d][Pt=%d][mode=%d][OrgRunPt=%d]-[
 					if ( res != -1 ) Remove_Inf_Dummy_PostWait( dummyparam ); // 2009.09.23
 				}
 //------------------------------------------------------------------------------------------------------------------
-_IO_CONSOLE_PRINTF( "FLOWCTL-SEL.POST3\t[Side=%d][Pt=%d][mode=%d][OrgRunPt=%d]-[checkch=PM%d][checkorder=%d][Param=%d][dm=%d][%s][Res=%d]\n" , side , pointer , _i_SCH_CLUSTER_Get_PathRun( side , pointer , 14 , 2 ) , m , checkch - PM1 + 1 , checkorder , Inf_Dummy_PostWait_Value[dummyparam] , dummymode , STR_MEM_GET_STR( Inf_Dummy_PostWait_Name[dummyparam] ) , res );
+//_IO_CONSOLE_PRINTF( "FLOWCTL-SEL.POST3\t[Side=%d][Pt=%d][mode=%d][OrgRunPt=%d]-[checkch=PM%d][checkorder=%d][Param=%d][dm=%d][%s][Res=%d]\n" , side , pointer , _i_SCH_CLUSTER_Get_PathRun( side , pointer , 14 , 2 ) , m , checkch - PM1 + 1 , checkorder , Inf_Dummy_PostWait_Value[dummyparam] , dummymode , STR_MEM_GET_STR( Inf_Dummy_PostWait_Name[dummyparam] ) , res );
 //------------------------------------------------------------------------------------------------------------------
 				//
 				if ( res == -1 ) return 1;
@@ -3473,4 +3474,3 @@ void _SCH_MACRO_OTHER_LOT_LOAD_WAIT( int side , unsigned int timeoutsec ) { // 2
 	}
 	//================================================================================================
 }
-
