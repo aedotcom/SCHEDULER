@@ -108,77 +108,77 @@ int _i_EIL_OPERATE_REQUEST_TM_TO_EIL( int bm );
 
 	INSERT
 
-		1 - BM °ªÀÌ Àß¸øµÈ °ªÀÔ´Ï´Ù.
-		2 - BM Slot°ªÀÌ Àß¸øµÈ °ªÀÔ´Ï´Ù.
-		4 - SourceWafer °ªÀÌ 1-MAX_CASSETTE_SLOT »çÀÌ°¡ ¾Æ´Õ´Ï´Ù.
-		5 - BMÀÇ ÇØ´ç Slot¿¡ Method°¡ Á¸ÀçÇÕ´Ï´Ù.
+		1 - BM ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+		2 - BM Slotï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+		4 - SourceWafer ï¿½ï¿½ï¿½ï¿½ 1-MAX_CASSETTE_SLOT ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		5 - BMï¿½ï¿½ ï¿½Ø´ï¿½ Slotï¿½ï¿½ Methodï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 
-		11 - BMÀÌ »ç¿ëÇÏÁö ¾Ê´Â BMÀÔ´Ï´Ù.
-		12 - BMÀÌ Dummy/Align¿ë BMÀÔ´Ï´Ù.
-		13 - BMÀÌ Enable»óÅÂ°¡ ¾Æ´Õ´Ï´Ù.
-		14 - BMÀÌ FM_SIDE»óÅÂ°¡ ¾Æ´Õ´Ï´Ù.
-		15 - BMÀÌ FM_SIDE·Î µ¿ÀÛÁßÀÔ´Ï´Ù.
+		11 - BMï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ BMï¿½Ô´Ï´ï¿½.
+		12 - BMï¿½ï¿½ Dummy/Alignï¿½ï¿½ BMï¿½Ô´Ï´ï¿½.
+		13 - BMï¿½ï¿½ Enableï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		14 - BMï¿½ï¿½ FM_SIDEï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		15 - BMï¿½ï¿½ FM_SIDEï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
 
-		21 - Source Á¤º¸°¡ °°Àº Wafer°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù.
-		22 - ÇØ´ç Wafer¸¦ inserÇÒ ³»ºÎ ÀúÀå°ø°£ÀÌ ¾ø½À´Ï´Ù.
+		21 - Source ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Waferï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+		22 - ï¿½Ø´ï¿½ Waferï¿½ï¿½ inserï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
 
-		31 - Cluster Recipe FileÀ» ÀÐ´ÂÁß¿¡ File¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.
-		32 - Cluster Recipe FileÀ» ÀÐ´ÂÁß¿¡ USER_RECIPE_CLUSTER_DATA_READ DLL¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.(FA Mode)
-		33 - Cluster Recipe FileÀ» ÀÐ´ÂÁß¿¡ DLLÀÇ Data¸¦ Àû¿ëÇÏ´Âµ¥ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.(FA Mode)
-		34 - Cluster Recipe FileÀ» ÀÐ´ÂÁß¿¡ USER_RECIPE_CLUSTER_DATA_READ DLL¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.
-		35 - Cluster Recipe FileÀ» ÀÐ´ÂÁß¿¡ DLLÀÇ Data¸¦ Àû¿ëÇÏ´Âµ¥ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.
-	  
-		51 - Information FileÀ» ÀÐ´ÂÁß¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.
-		61 - DLL Interface(Normal)¸¦ ÅëÇÑ Data SettingÁß¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.
-		71 - DLL Interface(MFI)¸¦ ÅëÇÑ Data SettingÁß¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.
+		31 - Cluster Recipe Fileï¿½ï¿½ ï¿½Ð´ï¿½ï¿½ß¿ï¿½ Fileï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+		32 - Cluster Recipe Fileï¿½ï¿½ ï¿½Ð´ï¿½ï¿½ß¿ï¿½ USER_RECIPE_CLUSTER_DATA_READ DLLï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.(FA Mode)
+		33 - Cluster Recipe Fileï¿½ï¿½ ï¿½Ð´ï¿½ï¿½ß¿ï¿½ DLLï¿½ï¿½ Dataï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.(FA Mode)
+		34 - Cluster Recipe Fileï¿½ï¿½ ï¿½Ð´ï¿½ï¿½ß¿ï¿½ USER_RECIPE_CLUSTER_DATA_READ DLLï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+		35 - Cluster Recipe Fileï¿½ï¿½ ï¿½Ð´ï¿½ï¿½ß¿ï¿½ DLLï¿½ï¿½ Dataï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+		51 - Information Fileï¿½ï¿½ ï¿½Ð´ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+		61 - DLL Interface(Normal)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Data Settingï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+		71 - DLL Interface(MFI)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Data Settingï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 		81 - Lot Pre Fail
 
 
 	START
 
-		1 - BM °ªÀÌ Àß¸øµÈ °ªÀÔ´Ï´Ù.
+		1 - BM ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
 
-		11 - BMÀÌ »ç¿ëÇÏÁö ¾Ê´Â BMÀÔ´Ï´Ù.
-		12 - BMÀÌ Dummy/Align¿ë BMÀÔ´Ï´Ù.
-		13 - BMÀÌ Enable»óÅÂ°¡ ¾Æ´Õ´Ï´Ù.
-		14 - BMÀÌ FM_SIDE»óÅÂ°¡ ¾Æ´Õ´Ï´Ù.
-		15 - BMÀÌ FM_SIDE·Î µ¿ÀÛÁßÀÔ´Ï´Ù.
+		11 - BMï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ BMï¿½Ô´Ï´ï¿½.
+		12 - BMï¿½ï¿½ Dummy/Alignï¿½ï¿½ BMï¿½Ô´Ï´ï¿½.
+		13 - BMï¿½ï¿½ Enableï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		14 - BMï¿½ï¿½ FM_SIDEï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		15 - BMï¿½ï¿½ FM_SIDEï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
 
 
 	REMOVE
 
-		1 - BM °ªÀÌ Àß¸øµÈ °ªÀÔ´Ï´Ù.
-		2 - BM Slot°ªÀÌ Àß¸øµÈ °ªÀÔ´Ï´Ù.
-		6 - BMÀÇ ÇØ´ç Slot¿¡ Method°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.
-		7 - BMÀÇ ÇØ´ç MethodÀÇ PathRange°ªÀÌ Àß¸øµÇ¾ú½À´Ï´Ù.
+		1 - BM ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+		2 - BM Slotï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+		6 - BMï¿½ï¿½ ï¿½Ø´ï¿½ Slotï¿½ï¿½ Methodï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+		7 - BMï¿½ï¿½ ï¿½Ø´ï¿½ Methodï¿½ï¿½ PathRangeï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
 
-		11 - BMÀÌ »ç¿ëÇÏÁö ¾Ê´Â BMÀÔ´Ï´Ù.
-		12 - BMÀÌ Dummy/Align¿ë BMÀÔ´Ï´Ù.
-		13 - BMÀÌ Enable»óÅÂ°¡ ¾Æ´Õ´Ï´Ù.
-		14 - BMÀÌ FM_SIDE»óÅÂ°¡ ¾Æ´Õ´Ï´Ù.
-		15 - BMÀÌ FM_SIDE·Î µ¿ÀÛÁßÀÔ´Ï´Ù.
+		11 - BMï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ BMï¿½Ô´Ï´ï¿½.
+		12 - BMï¿½ï¿½ Dummy/Alignï¿½ï¿½ BMï¿½Ô´Ï´ï¿½.
+		13 - BMï¿½ï¿½ Enableï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		14 - BMï¿½ï¿½ FM_SIDEï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Õ´Ï´ï¿½.
+		15 - BMï¿½ï¿½ FM_SIDEï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
 
 	BEGIN
 
-		1 - ÇØ´ç SIDE(CM)ÀÌ RunningÀÌ ¾Æ´Ò¶§
-		2 - ÇØ´ç SIDE(CM)ÀÇ Wafer°¡ ÇÑÀå ÀÌ»óÀÌ ÁøÇàÁß¿¡ ÀÖÀ»¶§
+		1 - ï¿½Ø´ï¿½ SIDE(CM)ï¿½ï¿½ Runningï¿½ï¿½ ï¿½Æ´Ò¶ï¿½
+		2 - ï¿½Ø´ï¿½ SIDE(CM)ï¿½ï¿½ Waferï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-		11 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_IDLE(0)ÀÏ ¶§
-		12 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_IDLE(0)º¸´Ù ÀÛÀ»¶§
-		13 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_DISABLE(5)ÀÏ ¶§
-		14 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_ABORTING(4)ÀÏ ¶§
-		15 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_WAIT_HAND_OFF(7)º¸´Ù Å©°Å³ª °°À»¶§
+		11 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_IDLE(0)ï¿½ï¿½ ï¿½ï¿½
+		12 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_IDLE(0)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		13 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_DISABLE(5)ï¿½ï¿½ ï¿½ï¿½
+		14 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_ABORTING(4)ï¿½ï¿½ ï¿½ï¿½
+		15 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_WAIT_HAND_OFF(7)ï¿½ï¿½ï¿½ï¿½ Å©ï¿½Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	END
 
-		1 - ÇØ´ç SIDE(CM)ÀÌ RunningÀÌ ¾Æ´Ò¶§
-		2 - ÇØ´ç SIDE(CM)ÀÇ Wafer°¡ ÇÑÀå ÀÌ»óÀÌ ÁøÇàÁß¿¡ ÀÖÀ»¶§
+		1 - ï¿½Ø´ï¿½ SIDE(CM)ï¿½ï¿½ Runningï¿½ï¿½ ï¿½Æ´Ò¶ï¿½
+		2 - ï¿½Ø´ï¿½ SIDE(CM)ï¿½ï¿½ Waferï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-		11 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_IDLE(0)ÀÏ ¶§
-		12 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_IDLE(0)º¸´Ù ÀÛÀ»¶§
-		13 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_DISABLE(5)ÀÏ ¶§
-		14 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_ABORTING(4)ÀÏ ¶§
-		15 - MAIN_CONTROL IOÀÇ »óÅÂ°¡ CTC_WAIT_HAND_OFF(7)º¸´Ù Å©°Å³ª °°À»¶§
+		11 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_IDLE(0)ï¿½ï¿½ ï¿½ï¿½
+		12 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_IDLE(0)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		13 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_DISABLE(5)ï¿½ï¿½ ï¿½ï¿½
+		14 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_ABORTING(4)ï¿½ï¿½ ï¿½ï¿½
+		15 - MAIN_CONTROL IOï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ CTC_WAIT_HAND_OFF(7)ï¿½ï¿½ï¿½ï¿½ Å©ï¿½Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 3) IO Status
@@ -206,11 +206,11 @@ int _i_EIL_OPERATE_REQUEST_TM_TO_EIL( int bm );
 
 	CTC.BMx_EIL_ERROR
 
-		REMOVE , START , INSERT ÀÇ MessageÀÏ °æ¿ì »ç¿ë
+		REMOVE , START , INSERT ï¿½ï¿½ Messageï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 	CTC.CMx_EIL_ERROR
 
-		BEGIN , END ÀÇ MessageÀÏ °æ¿ì »ç¿ë
+		BEGIN , END ï¿½ï¿½ Messageï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 
 */
@@ -228,8 +228,8 @@ int Address_EIL_BM_MODE[MAX_BM_CHAMBER_DEPTH];
 int Address_EIL_BM_STATUS[MAX_BM_CHAMBER_DEPTH][MAX_CASSETTE_SLOT_SIZE];
 int Address_EIL_BM_UNIQUEID[MAX_BM_CHAMBER_DEPTH][MAX_CASSETTE_SLOT_SIZE];
 
-int Address_EIL_TIM_LOG_POINTER;
-int Address_EIL_JOB_LOG_POINTER;
+extern int Address_EIL_TIM_LOG_POINTER;
+extern int Address_EIL_JOB_LOG_POINTER;
 int	Address_EIL_LOT_LOG_POINTER[MAX_CASSETTE_SIDE];
 //----------------------------------------------------------------------------
 time_t	_EIL_TIME_FOR_INSERT[ MAX_CASSETTE_SIDE ][ MAX_CASSETTE_SLOT_SIZE ];
@@ -240,8 +240,8 @@ int		_EIL_SUPPLY_COUNT_REMOVE[ MAX_CASSETTE_SIDE ];
 char	*_EIL_METHOD_RECIPE[ MAX_CASSETTE_SIDE ][ MAX_CASSETTE_SLOT_SIZE ]; // 2011.06.15
 //----------------------------------------------------------------------------
 char	*_EIL_METHOD_FOLDER[ MAX_CASSETTE_SIDE ][ MAX_CASSETTE_SLOT_SIZE ]; // 2011.05.21
-char	_EIL_METHOD_LAST_FOLDER[256]; // 2011.05.21
-char	_EIL_METHOD_LAST_PPID[256]; // 2011.07.15
+extern char	_EIL_METHOD_LAST_FOLDER[256]; // 2011.05.21
+extern char	_EIL_METHOD_LAST_PPID[256]; // 2011.07.15
 //----------------------------------------------------------------------------
 char	*_EIL_READY_RECIPE_NAME[ MAX_CASSETTE_SIDE ][ MAX_CASSETTE_SLOT_SIZE ][ MAX_CHAMBER ]; // 2011.07.28
 //----------------------------------------------------------------------------
@@ -254,7 +254,7 @@ int		BM_EIL_AUTO_TMSIDE[ MAX_BM_CHAMBER_DEPTH ]; // 2012.04.27
 //----------------------------------------------------------------------------
 int		PM_EIL_ENABLE_CONTROL[ MAX_CHAMBER ]; // 2011.07.25
 //----------------------------------------------------------------------------
-int		_EIL_WAFER_NUMBERING = 0; // 2012.03.23
+extern int		_EIL_WAFER_NUMBERING = 0; // 2012.03.23
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 BOOL	SCHEDULER_LOG_FOLDER( int CHECKING_SIDE , char *Buffer , char *recipefile );
@@ -275,27 +275,27 @@ int		Get_Module_ID_From_String( int , char * , int );
 //------------------------------------------------------------------------------------------
 CRITICAL_SECTION CR_EIL_FMMODE_GO_TMSIDE[MAX_CHAMBER];
 
-int _EIL_FMMODE_TM_INTERFACE_FUNCTION = -2;
+extern int _EIL_FMMODE_TM_INTERFACE_FUNCTION;
+          _EIL_FMMODE_TM_INTERFACE_FUNCTION = -2;
 
+int _EIL_FMMODE_BM_MODE_LAST[MAX_CHAMBER];
+int _EIL_FMMODE_BM_MODE_STOPPED[MAX_CHAMBER];
 
-int _EIL_FMMODE_BM_MODE_LAST[MAX_CHAMBER]; 
-int _EIL_FMMODE_BM_MODE_STOPPED[MAX_CHAMBER]; 
-
-int _EIL_FMMODE_BM_TMSIDE_RUNNING[MAX_CHAMBER]; 
-int _EIL_FMMODE_BM_TMSIDE_TIMER[MAX_CHAMBER]; 
+int _EIL_FMMODE_BM_TMSIDE_RUNNING[MAX_CHAMBER];
+int _EIL_FMMODE_BM_TMSIDE_TIMER[MAX_CHAMBER];
 
 #define _EIL_FMMODE_INSERT_MAX_COUNT	512
 
 CRITICAL_SECTION CR_EIL_FMMODE_INSERT;
 
-int _EIL_FMMODE_INSERT_GID = 1;
-//
-int _EIL_FMMODE_INSERT_COUNT;
-int _EIL_FMMODE_INSERT_SIDE[_EIL_FMMODE_INSERT_MAX_COUNT];
-int _EIL_FMMODE_INSERT_PT[_EIL_FMMODE_INSERT_MAX_COUNT];
-int _EIL_FMMODE_INSERT_WFR[_EIL_FMMODE_INSERT_MAX_COUNT];
-int _EIL_FMMODE_INSERT_USE[_EIL_FMMODE_INSERT_MAX_COUNT];
-int _EIL_FMMODE_INSERT_ID[_EIL_FMMODE_INSERT_MAX_COUNT];
+extern int _EIL_FMMODE_INSERT_GID ;
+           _EIL_FMMODE_INSERT_GID = 1;
+extern int _EIL_FMMODE_INSERT_COUNT;
+extern int _EIL_FMMODE_INSERT_SIDE[_EIL_FMMODE_INSERT_MAX_COUNT];
+extern int _EIL_FMMODE_INSERT_PT[_EIL_FMMODE_INSERT_MAX_COUNT];
+extern int _EIL_FMMODE_INSERT_WFR[_EIL_FMMODE_INSERT_MAX_COUNT];
+extern int _EIL_FMMODE_INSERT_USE[_EIL_FMMODE_INSERT_MAX_COUNT];
+extern int _EIL_FMMODE_INSERT_ID[_EIL_FMMODE_INSERT_MAX_COUNT];
 
 
 int _EIL_FMMODE_INSERT_SET_DATA( int s , int p , int w , int *id ) {
@@ -503,7 +503,7 @@ void _EIL_FMMODE_INIT( int apmode , int side ) {
 //       REMOVE(X)      - REMOVE(X)      - NEED_REMOVE(O)
 //                                       - REMOVE(X)
 //
-//       
+//
 
 
 int _EIL_FMMODE_RUN_CONTROL_TM( int side ) {
@@ -1015,7 +1015,7 @@ int _EIL_FMMODE_MACRO_CHECK_PROCESSING( int ch ) {
 
 
 
-	
+
 void _EIL_FMMODE_EQ_BEGIN_END_RUN( int ch , BOOL End , char *appendstring , int Disable ) {
 	//
 	if ( End ) {
@@ -1492,8 +1492,8 @@ void EIL_Chk_Elapsed_Time( time_t time_data , char *buffer ) {
 	hour = ( elapsed_time % 86400 ) / 3600;
 	min  = ( elapsed_time % 3600  ) / 60;
 	sec  = ( elapsed_time % 60    );
-	if ( day > 0 ) sprintf( buffer , "%02d:%02d:%02d:%02d" , day , hour , min , sec );
-	else           sprintf( buffer , "%02d:%02d:%02d" , hour , min , sec );
+	if ( day > 0 ) sprintf( buffer , "%02d:%02d:%02d:%02d" , (int)day , (int)hour , (int)min , (int)sec );
+	else           sprintf( buffer , "%02d:%02d:%02d" , (int)hour , (int)min , (int)sec );
 }
 
 void EIL_Chk_Local_Time_for_File( char *buffer , int Sep ) {
@@ -2432,7 +2432,7 @@ BOOL EIL_PRE_SETTING( int side , int pt , int bm , int slot , int incm0 , int wa
 	if ( feedbackmsg[0] == '>' ) {
 		//
 		STR_SEPERATE_CHAR5( feedbackmsg + 1 , '|' , chr_return , cj_control , pj_control , ppid_control , wid_control , 256 );
-		//
+		STR_SEPERATE_CHAR5( feedbackmsg++ , '|' , chr_return , cj_control , pj_control , ppid_control , wid_control , 256 );
 		i = atoi( chr_return );
 		//
 		if ( i < 0 ) i = 0;
@@ -3129,6 +3129,7 @@ int _i_EIL_SIDE_BEGIN( int side , char *jobname , char *midname , char *ppid_rec
 		if ( STRNCMP_L( ppid_recipename , "<MANUAL>" , 8 ) ) {
 			//
 			strcpy( ppid , ppid_recipename + 8 );
+			strcpy( ppid , ppid_recipename[8]=NULL );
 			//
 		}
 		else {
@@ -3457,7 +3458,7 @@ int _i_EIL_METHOD_INSERT_TO_EIL( int bm , int slot , int incm0 , int wafer , cha
 //_IO_COMMON_PRINTF( 3 , "EIL" , "INSERT" , "[B] RES=%d , BM=%d,Slot=%d,incm0=%d,Wafer=%d,File=%s\n" , Res , bm , slot , incm0 , wafer , clusterRecipefile );
 	if ( !EIL_MODULE_STATUS_PM_SET( TRUE , side , pt , ppid_control ) ) return 81;
 	//==========================================================================================
-//	_i_SCH_CLUSTER_Set_PathStatus( side , pt , SCHEDULER_SUPPLY ); // 2011.07.05 // 2011.10.20 FM_Nomore°¡ µÇÁö ¾Ê°Ô ÇÏ±â À§ÇØ READY·Î ³²°ÜµÒ
+//	_i_SCH_CLUSTER_Set_PathStatus( side , pt , SCHEDULER_SUPPLY ); // 2011.07.05 // 2011.10.20 FM_Nomoreï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ READYï¿½ï¿½ ï¿½ï¿½ï¿½Üµï¿½
 	//-----------------------------------------------------------------------------------------------------------------------
 //_IO_COMMON_PRINTF( 3 , "EIL" , "INSERT" , "[C] RES=%d , BM=%d,Slot=%d,incm0=%d,Wafer=%d,File=%s\n" , Res , bm , slot , incm0 , wafer , clusterRecipefile );
 	//==========================================================================================
