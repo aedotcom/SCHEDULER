@@ -8,7 +8,7 @@
 //----------------------------------------------------------------------------
 extern char    COMMON_BLANK_CHAR[2];
 //----------------------------------------------------------------------------
-#define MAKE_DEFAULT_INT_PARAMETER( ITEM , DEFAULT ) int ITEM = DEFAULT; \
+#define MAKE_DEFAULT_INT_PARAMETER( ITEM , DEFAULT ) int ITEM ; \
 	void _i_SCH_PRM_SET_##ITEM##( int data )	{ ITEM = data; } \
 	int  _i_SCH_PRM_GET_##ITEM##()				{ return ITEM; }
 
