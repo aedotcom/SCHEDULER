@@ -2431,7 +2431,7 @@ BOOL EIL_PRE_SETTING( int side , int pt , int bm , int slot , int incm0 , int wa
 	//
 	if ( feedbackmsg[0] == '>' ) {
 		//
-		STR_SEPERATE_CHAR5( feedbackmsg + 1 , '|' , chr_return , cj_control , pj_control , ppid_control , wid_control , 256 );
+		//STR_SEPERATE_CHAR5( feedbackmsg + 1 , '|' , chr_return , cj_control , pj_control , ppid_control , wid_control , 256 );
 		STR_SEPERATE_CHAR5( feedbackmsg++ , '|' , chr_return , cj_control , pj_control , ppid_control , wid_control , 256 );
 		i = atoi( chr_return );
 		//
@@ -3412,7 +3412,7 @@ int _i_EIL_METHOD_INSERT_TO_EIL( int bm , int slot , int incm0 , int wafer , cha
 			//
 		}
 		//
-		Res = _i_SCH_SUB_RECIPE_READ_CLUSTER( side , pt , 0 , incm , wafer , clusterRecipefile + pos );
+		Res = _i_SCH_SUB_RECIPE_READ_CLUSTER( side , pt , 0 , incm , wafer , clusterRecipefile[pos]=NULL );
 		//
 		if ( Res != ERROR_NONE ) return ( Res + 30 );
 		//
@@ -3432,19 +3432,19 @@ int _i_EIL_METHOD_INSERT_TO_EIL( int bm , int slot , int incm0 , int wafer , cha
 	//
 	if ( Res != 0 ) return ( Res + 100 );
 	//==========================================================================================
-	_i_SCH_CLUSTER_Set_Ex_RecipeName( side , pt , clusterRecipefile + pos ); // 2012.09.13
+	_i_SCH_CLUSTER_Set_Ex_RecipeName( side , pt , clusterRecipefile[pos] ); // 2012.09.13
 	//
 	if ( !EIL_PRE_SETTING( side , pt , bm , slot , incm0 , wafer , clusterRecipefile + pos , informationfile , wid_control , ppid_control ) ) { // 2010.10.05
 		return 51;
 	}
 //_IO_COMMON_PRINTF( 3 , "EIL" , "INSERT" , "[8] RES=%d , BM=%d,Slot=%d,incm0=%d,Wafer=%d,File=%s\n" , Res , bm , slot , incm0 , wafer , clusterRecipefile );
 	//==========================================================================================
-	if ( !USER_RECIPE_INFO_VERIFICATION_EIL( side , pt , bm , slot , incm0 , wafer , clusterRecipefile + pos , informationfile ) ) { // 2010.09.16
+	if ( !USER_RECIPE_INFO_VERIFICATION_EIL( side , pt , bm , slot , incm0 , wafer , clusterRecipefile[pos]=NULL , informationfile ) ) { // 2010.09.16
 		return 61;
 	}
 //_IO_COMMON_PRINTF( 3 , "EIL" , "INSERT" , "[9] RES=%d , BM=%d,Slot=%d,incm0=%d,Wafer=%d,File=%s\n" , Res , bm , slot , incm0 , wafer , clusterRecipefile );
 	//==========================================================================================
-	if ( !_SCH_INF_DLL_INFO_VERIFICATION_EIL( side , pt , bm , slot , incm0 , wafer , clusterRecipefile + pos , informationfile ) ) { // 2010.09.16
+	if ( !_SCH_INF_DLL_INFO_VERIFICATION_EIL( side , pt , bm , slot , incm0 , wafer , clusterRecipefile[pos]=NULL , informationfile ) ) { // 2010.09.16
 		return 71;
 	}
 	//
