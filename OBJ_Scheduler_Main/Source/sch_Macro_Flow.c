@@ -31,25 +31,46 @@
 #include "INF_sch_macro.h"
 #include "INF_sch_CommonUser.h"
 
-#include "sch_Macro_Flow.h"
 //================================================================================
 extern int  _in_HOT_LOT_ORDERING_INVALID[MAX_CASSETTE_SIDE]; // 2011.06.13
 //================================================================================
 extern int  _in_FM_PICK_POSSIBLE_LAST_RETURNCODE[MAX_CASSETTE_SIDE]; // 2014.10.14
 //================================================================================
 int Get_Inside_Value_for_Common_Thread_Status( int side , int where ); // 2008.07.29
+void Init_Inf_Dummy_PostWait(void);
+void Remove_Inf_Dummy_PostWait( int i );
+int Get_Inf_Dummy_PostWait( int side , int pointer , int *dm ) ;
+void Set_Inf_Dummy_PostWait( int side , int pointer , int m , int v , char *name );
+void _SCH_MACRO_FM_SUPPLY_FIRSTLAST_CHECK( int side , int pointer , int firsttag , int lasttag , int cmstarteveryskip );
+int _SCH_inside_Get_Dummy_Muti_Wait_UsingPM( int side , int pointer , int ch , int *order );
+int _SCH_inside_Get_Dummy_Use_OnePM( int side , int pointer , int ch );
+int _SCH_inside_Get_DLL_Dummy( int postwait , int side , int pointer , int mode , int selpm , int selparam , int *dummychamber , int *dummyslot , char *SelectRecipe );
+void _SCH_inside_ConvStr_29_Dummy( char *SelectRecipe ) ;
+int _SCH_inside_Get_Dummy( int side , int pointer , int mode , int tag2 , int tag3 , int cmd , int curnotuse );
+int _SCH_inside_Unused_Remap_Dummy( int side , int pointer , int *orgrange );
+int _SCH_inside_Make_Dummy( int side , int pointer );
+void _SCH_inside_Ordering_Invalid_OK( int side ) ;
+int _SCH_MACRO_FM_POSSIBLE_PICK_FROM_FM_FOR_LOG( int side );
+int _SCH_MACRO_FM_POSSIBLE_PICK_FROM_FM( int side , int *cm , int *pt , int subchk );
+int _SCH_MACRO_FM_POSSIBLE_PICK_FROM_CM( int side , int *cm , int *pt ) ;
+int _i_SCH_USER_POSSIBLE_PICK_FROM_FM( int side , int *pt );
+int _i_SCH_USER_POSSIBLE_PICK_FROM_TM( int side , int *pt );
+int _i_SCH_SUB_POSSIBLE_PICK_FROM_FM_NOSUPPLYCHECK( int side , int *cm , int *pt );
+int _i_SCH_SUB_POSSIBLE_PICK_FROM_FM_NOSUPPLYCHECK_U( int side , int *cm , int *pt );
+void _SCH_MACRO_FM_SUPPOSING_PICK_FOR_OTHERSIDE( int side , int count );
+void _SCH_MACRO_OTHER_LOT_LOAD_WAIT( int side , unsigned int timeoutsec );
 //================================================================================
 extern int  _SCH_TAG_DUMMY_FLOW_CH;
 extern int  _SCH_TAG_DUMMY_FLOW_SLOT;
 extern Scheduling_Path	_SCH_INF_CLUSTER_DATA_AREA[ MAX_CASSETTE_SIDE ][ MAX_CASSETTE_SLOT_SIZE ];
 //================================================================================
-//int Inf_Dummy_PostWait_Use[32]; -> extern 추가
-//int Inf_Dummy_PostWait_Mode[32];
-//int Inf_Dummy_PostWait_Value[32];
-//char *Inf_Dummy_PostWait_Name[32];
+extern int Inf_Dummy_PostWait_Use[32];
+extern int Inf_Dummy_PostWait_Mode[32];
+extern int Inf_Dummy_PostWait_Value[32];
+extern char *Inf_Dummy_PostWait_Name[32];
 //================================================================================
 
-void Init_Inf_Dummy_PostWait() {
+void Init_Inf_Dummy_PostWait(void) {
 	int i;
 	for ( i = 0 ; i < 32 ; i++ ) {
 		Inf_Dummy_PostWait_Use[i] = -1;
