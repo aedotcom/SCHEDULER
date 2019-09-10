@@ -3870,7 +3870,7 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 					*rcode = 381;
 					return SYS_ABORTED;
 				}
-	
+
 				Finger2 = Transfer_ROBOT_GET_TR_FAST_PICK_FINGER( _i_SCH_PRM_GET_MODULE_GROUP( Trg_Station ) , BM_Station[0] );
 
 				if ( EQUIP_PICK_FROM_CHAMBER_TT( _i_SCH_PRM_GET_MODULE_GROUP( Trg_Station ) , TR_CHECKING_SIDE , BM_Station[0] , Finger2 , Transfer_GET_Slot_for_TM_Action( Src_Slot , Src_Slot2 ) , Transfer_GET_Slot_for_TM_Action( BM_Slot[0] , BM_Slot2[0] ) , FALSE , FM_CM , FALSE , 0 , 0 ) == SYS_ABORTED ) {
@@ -3891,7 +3891,7 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 					*rcode = 384;
 					return SYS_ABORTED;
 				}
-	
+
 				Finger2 = Transfer_ROBOT_GET_TR_FAST_PICK_FINGER( _i_SCH_PRM_GET_MODULE_GROUP( Trg_Station ) , BM_Station[0] );
 				if ( EQUIP_PICK_FROM_CHAMBER_TT( _i_SCH_PRM_GET_MODULE_GROUP( Trg_Station ) , TR_CHECKING_SIDE , BM_Station[0] , Finger2 , Transfer_GET_Slot_for_TM_Action( Src_Slot , Src_Slot2 ) , Transfer_GET_Slot_for_TM_Action( BM_Slot[0] , BM_Slot2[0] ) , FALSE , FM_CM , FALSE , 0 , 0 ) == SYS_ABORTED ) {
 					*rcode = 385;
@@ -4190,10 +4190,10 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 				//======================================================================================
 				// 2007.10.02
 				//======================================================================================
-				if ( ( Src_Slot > 0 ) && ( Src_Slot <= 0 ) && ( Finger == 1 ) ) {
-					Src_Slot2 = Src_Slot;
-					Src_Slot = 0;
-				}
+				//if ( ( Src_Slot > 0 ) && ( Src_Slot <= 0 ) && ( Finger == 1 ) ) {
+				//	Src_Slot2 = Src_Slot;
+				//	Src_Slot = 0;
+				//}
 				//======================================================================================
 				//======================================================================================
 				// 2007.10.02
@@ -6952,7 +6952,7 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 								BM_RUN[i]++;
 							}
 						}
-					} 
+					}
 				}
 				if ( FM_AL_HAS_A_WAFER( TR_CHECKING_SIDE ) ) BM_ALL_RUN++;
 				if ( FM_IC_HAS_A_WAFER( TR_CHECKING_SIDE , &j ) ) BM_ALL_RUN++;
@@ -8900,9 +8900,9 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									if ( _i_SCH_ROBOT_GET_FINGER_HW_USABLE( p , TA_STATION ) && ( ( xW_STATUS_IN_TM[ p ][ TA_STATION ] <= 0 ) && ( xW_STATUS_IN_TM2[ p ][ TA_STATION ] <= 0 ) ) ) {
 										f = TA_STATION;
 										Src_Slot  = xW_STATUS_IN_CHAMBER[ i ][ 1 ];
-										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0; 
+										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0;
 										Src_Slot2 = xW_STATUS_IN_CHAMBER[ i ][ 2 ];
-										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0; 
+										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0;
 										Trg_Station = i;
 										i = -1;
 										grp = p;
@@ -8913,9 +8913,9 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									if ( _i_SCH_ROBOT_GET_FINGER_HW_USABLE( p , TB_STATION ) && ( ( xW_STATUS_IN_TM[ p ][ TB_STATION ] <= 0 ) && ( xW_STATUS_IN_TM2[ p ][ TB_STATION ] <= 0 ) ) ) {
 										f = TB_STATION;
 										Src_Slot  = xW_STATUS_IN_CHAMBER[ i ][ 1 ];
-										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0; 
+										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0;
 										Src_Slot2 = xW_STATUS_IN_CHAMBER[ i ][ 2 ];
-										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0; 
+										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0;
 										Trg_Station = i;
 										i = -1;
 										grp = p;
@@ -8995,9 +8995,9 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									if ( _i_SCH_ROBOT_GET_FINGER_HW_USABLE( p , TA_STATION ) && ( ( xW_STATUS_IN_TM[ p ][ TA_STATION ] <= 0 ) && ( xW_STATUS_IN_TM2[ p ][ TA_STATION ] <= 0 ) ) ) {
 										f = TA_STATION;
 										Src_Slot  = xW_STATUS_IN_CHAMBER[ i ][ 1 ];
-										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0; 
+										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0;
 										Src_Slot2 = xW_STATUS_IN_CHAMBER[ i ][ 2 ];
-										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0; 
+										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0;
 										Trg_Station = i;
 										i = -1;
 										grp = p;
@@ -9016,9 +9016,9 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									if ( _i_SCH_ROBOT_GET_FINGER_HW_USABLE( p , TB_STATION ) && ( ( xW_STATUS_IN_TM[ p ][ TB_STATION ] <= 0 ) && ( xW_STATUS_IN_TM2[ p ][ TB_STATION ] <= 0 ) ) ) {
 										f = TB_STATION;
 										Src_Slot  = xW_STATUS_IN_CHAMBER[ i ][ 1 ];
-										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0; 
+										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0;
 										Src_Slot2 = xW_STATUS_IN_CHAMBER[ i ][ 2 ];
-										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0; 
+										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0;
 										Trg_Station = i;
 										i = -1;
 										grp = p;
@@ -9144,9 +9144,9 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									if ( _i_SCH_ROBOT_GET_FINGER_HW_USABLE( p , TA_STATION ) && ( ( xW_STATUS_IN_TM[ p ][ TA_STATION ] <= 0 ) && ( xW_STATUS_IN_TM2[ p ][ TA_STATION ] <= 0 ) ) ) {
 										f = TA_STATION;
 										Src_Slot  = xW_STATUS_IN_CHAMBER[ i ][ 1 ];
-										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0; 
+										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0;
 										Src_Slot2 = xW_STATUS_IN_CHAMBER[ i ][ 2 ];
-										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0; 
+										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0;
 										Trg_Station = i;
 										i = -1;
 										grp = p;
@@ -9157,9 +9157,9 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									if ( _i_SCH_ROBOT_GET_FINGER_HW_USABLE( p , TB_STATION ) && ( ( xW_STATUS_IN_TM[ p ][ TB_STATION ] <= 0 ) && ( xW_STATUS_IN_TM2[ p ][ TB_STATION ] <= 0 ) ) ) {
 										f = TB_STATION;
 										Src_Slot  = xW_STATUS_IN_CHAMBER[ i ][ 1 ];
-										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0; 
+										if ( Src_Slot > 0 )	Trg_Slot = 1; else Trg_Slot = 0;
 										Src_Slot2 = xW_STATUS_IN_CHAMBER[ i ][ 2 ];
-										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0; 
+										if ( Src_Slot2 > 0 )	Trg_Slot2 = 2; else Trg_Slot2 = 0;
 										Trg_Station = i;
 										i = -1;
 										grp = p;
@@ -9246,7 +9246,7 @@ int Transfer_User_Running_FEM_Code( int Mode , int Use , int Finger , int Src_St
 									BM_RUN[i]++;
 								}
 							}
-						} 
+						}
 					}
 					if ( FM_AL_HAS_A_WAFER( TR_CHECKING_SIDE ) ) BM_ALL_RUN++;
 					if ( FM_IC_HAS_A_WAFER( TR_CHECKING_SIDE , &j ) ) BM_ALL_RUN++;
@@ -11064,7 +11064,7 @@ int Transfer_Main_Checking_FEM( int Mode , int *Use , int *Finger , int *Src_Sta
 						}
 					}
 					//----------------------------------------------------------------------------------------------
-// ??????????				
+// ??????????
 					if ( *Finger == 0 ) {
 						for ( a = 0 ; a < _i_SCH_PRM_GET_RB_FM_ARM_IS_DUAL_EXTEND_STYLE( 0 ) ; a++ ) {
 							if ( ( (*Trg_Slot) + a + 1 ) > _i_SCH_PRM_GET_MODULE_SIZE(*Trg_Station) ) return 109;
